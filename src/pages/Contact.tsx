@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, FormEvent } from "react";
 import { motion } from "framer-motion";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, MapPin, Building, Users, Briefcase, Phone, Globe, ArrowRight } from "lucide-react";
@@ -45,42 +45,38 @@ const Contact = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     try {
       const response = await fetch("/", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams({
           "form-name": "contact",
-          ...formData,
-        }),
+          ...formData
+        }).toString()
       });
 
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
+      if (response.ok) {
+        toast({
+          title: "Message sent successfully!",
+          description: "We'll get back to you as soon as possible."
+        });
+        setFormData({
+          name: "",
+          email: "",
+          subject: "General Inquiry",
+          message: ""
+        });
+      } else {
+        throw new Error("Form submission failed");
       }
-
-      toast({
-        title: "Message Sent!",
-        description: "We'll get back to you as soon as possible.",
-      });
-      
-      setFormData({
-        name: "",
-        email: "",
-        subject: "General Inquiry",
-        message: "",
-      });
     } catch (error) {
       toast({
-        title: "Error",
-        description: "There was a problem sending your message. Please try again.",
-        variant: "destructive",
+        title: "Error sending message",
+        description: "Please try again later."
       });
     } finally {
       setIsSubmitting(false);
@@ -213,10 +209,12 @@ const Contact = () => {
                 name="contact"
                 method="POST"
                 data-netlify="true"
+                data-netlify-honeypot="bot-field"
                 onSubmit={handleSubmit}
                 className="space-y-4 md:space-y-6"
               >
                 <input type="hidden" name="form-name" value="contact" />
+                <input type="hidden" name="bot-field" />
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                   <div>
@@ -260,10 +258,10 @@ const Contact = () => {
                     onChange={handleChange}
                     className="w-full px-3 py-2 text-sm md:text-base border border-gray-300 focus:border-reach-gold focus:ring-1 focus:ring-reach-gold outline-none transition-colors"
                   >
-                    <option>General Inquiry</option>
-                    <option>Chapter Support</option>
-                    <option>Brand Partnership</option>
-                    <option>Press & Media</option>
+                    <option value="General Inquiry">General Inquiry</option>
+                    <option value="Chapter Support">Chapter Support</option>
+                    <option value="Brand Partnership">Brand Partnership</option>
+                    <option value="Press & Media">Press & Media</option>
                   </select>
                 </div>
 
