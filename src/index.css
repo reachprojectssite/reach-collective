@@ -1,10 +1,13 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 210 40% 98%;
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
@@ -13,24 +16,24 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 221 83% 53%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;
+    --secondary: 220 14% 96%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 262 83% 58%;
+    --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 221 83% 53%;
 
     --radius: 0.5rem;
 
@@ -96,6 +99,68 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold;
+  }
+}
+
+@layer components {
+  .hero-gradient {
+    @apply bg-gradient-to-br from-reach-blue via-reach-purple to-reach-pink;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-reach-blue to-reach-purple bg-clip-text text-transparent;
+  }
+
+  .stat-card {
+    @apply bg-white shadow-lg rounded-xl px-6 py-5 text-center;
+  }
+
+  .feature-card {
+    @apply bg-white shadow-lg rounded-xl p-6 hover:shadow-xl transition-all duration-300;
+  }
+
+  .testimonial-card {
+    @apply bg-white shadow-lg rounded-xl p-6;
+  }
+
+  .nav-link {
+    @apply text-gray-700 hover:text-reach-blue transition-colors font-medium;
+  }
+
+  .nav-link.active {
+    @apply text-reach-blue font-bold;
+  }
+
+  .btn-primary {
+    @apply bg-reach-blue hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300;
+  }
+
+  .btn-secondary {
+    @apply bg-white border-2 border-reach-blue hover:bg-gray-50 text-reach-blue font-bold py-3 px-6 rounded-lg transition-colors duration-300;
+  }
+
+  .btn-accent {
+    @apply bg-reach-purple hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300;
+  }
+
+  .container {
+    @apply px-4 mx-auto max-w-7xl;
+  }
+
+  .section {
+    @apply py-16 md:py-24;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-center;
+  }
+
+  .section-subtitle {
+    @apply text-xl text-gray-600 max-w-3xl mx-auto text-center mb-12;
   }
 }
