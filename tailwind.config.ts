@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -20,6 +19,15 @@ export default {
 		},
 		extend: {
 			colors: {
+				// Primary brand colors
+				reach: {
+					navy: '#1E3D6B',
+					gold: '#C5A572',
+					crimson: '#9E1B32',
+					slate: '#556B87',
+					cream: '#F5F1E8',
+				},
+				// UI colors
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
@@ -63,16 +71,6 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom REACH colors
-				reach: {
-					blue: '#2563EB',
-					purple: '#8B5CF6',
-					pink: '#EC4899',
-					orange: '#F97316',
-					yellow: '#FACC15',
-					teal: '#0EA5E9',
-					green: '#10B981',
-				}
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -127,7 +125,8 @@ export default {
 			},
 			fontFamily: {
 				'sans': ['Inter', 'sans-serif'],
-				'display': ['Poppins', 'sans-serif']
+				'serif': ['Playfair Display', 'serif'],
+				'display': ['Cinzel', 'serif']
 			}
 		}
 	},

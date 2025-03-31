@@ -1,44 +1,48 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
+import Hero from './components/home/Hero';
+import Features from './components/home/Features';
+import Testimonials from './components/home/Testimonials';
+import CallToAction from './components/home/CallToAction';
+import About from './pages/About';
+import Join from './pages/Join';
+import Contact from './pages/Contact';
+import NotFound from './pages/NotFound';
+import Members from './pages/Members';
+import Chapters from './pages/Chapters';
 
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Index from "./pages/Index";
-import About from "./pages/About";
-import Join from "./pages/Join";
-import Contact from "./pages/Contact";
-import NotFound from "./pages/NotFound";
-import React from "react";
+const HomePage = () => {
+  return (
+    <main>
+      <Hero />
+      <Features />
+      <Testimonials />
+      <CallToAction />
+    </main>
+  );
+};
 
-const queryClient = new QueryClient();
-
-const App = () => (
-  <React.StrictMode>
-    <QueryClientProvider client={queryClient}>
-      <BrowserRouter>
-        <TooltipProvider>
-          <div className="flex flex-col min-h-screen">
-            <Navbar />
-            <main className="flex-grow">
-              <Routes>
-                <Route path="/" element={<Index />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/join" element={<Join />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="*" element={<NotFound />} />
-              </Routes>
-            </main>
-            <Footer />
-          </div>
-          <Toaster />
-          <Sonner />
-        </TooltipProvider>
-      </BrowserRouter>
-    </QueryClientProvider>
-  </React.StrictMode>
-);
+const App = () => {
+  return (
+    <Router>
+      <div className="min-h-screen bg-white">
+        <Navbar />
+        <main className="pt-16">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/members" element={<Members />} />
+            <Route path="/chapters" element={<Chapters />} />
+            <Route path="/join" element={<Join />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
+  );
+};
 
 export default App;

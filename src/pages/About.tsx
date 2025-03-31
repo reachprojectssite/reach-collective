@@ -1,251 +1,287 @@
-
 import React from "react";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Users, School, BookOpen, Heart, Brain, BarChart } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import FeatureCard from "@/components/FeatureCard";
-import TestimonialCard from "@/components/TestimonialCard";
+import { Users, GraduationCap, Briefcase, Heart, Target, Lightbulb, Building2, ArrowRight, Sparkles, Globe, Rocket, Star } from "lucide-react";
 
 const About = () => {
-  // Advisors data
-  const industryAdvisors = [
-    {
-      name: "Jennifer Martinez",
-      title: "Head of Creator Partnerships, Social Media Platform",
-      image: "https://i.pravatar.cc/150?img=1",
-    },
-    {
-      name: "David Chen",
-      title: "CEO, Creator Management Agency",
-      image: "https://i.pravatar.cc/150?img=2",
-    },
-    {
-      name: "Sophia Williams",
-      title: "Professor of Digital Media, Major University",
-      image: "https://i.pravatar.cc/150?img=3",
-    },
-    {
-      name: "Marcus Johnson",
-      title: "VP of Marketing, Global Brand",
-      image: "https://i.pravatar.cc/150?img=4",
-    },
-  ];
-  
-  const creatorAdvisors = [
-    {
-      name: "Taylor Rodriguez",
-      title: "Lifestyle Creator, 2M+ Followers",
-      image: "https://i.pravatar.cc/150?img=5",
-    },
-    {
-      name: "Alex Kim",
-      title: "Tech Reviewer, 1.5M+ Followers",
-      image: "https://i.pravatar.cc/150?img=6",
-    },
-    {
-      name: "Jordan Smith",
-      title: "Educational Content Creator, 3M+ Followers",
-      image: "https://i.pravatar.cc/150?img=7",
-    },
-  ];
-
   return (
-    <div className="pt-20">
+    <div className="bg-white">
       {/* Hero Section */}
-      <section className="pt-12 pb-20 md:pt-20 md:pb-24 bg-gradient-to-r from-reach-blue to-reach-purple text-white">
+      <section className="relative py-16 overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute -left-1/4 -top-1/4 w-1/2 h-1/2 bg-reach-cream rounded-full opacity-20 blur-3xl" />
+          <div className="absolute -right-1/4 -bottom-1/4 w-1/2 h-1/2 bg-reach-gold/20 rounded-full opacity-20 blur-3xl" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-reach-navy/5 rounded-full blur-3xl" />
+        </div>
+        
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">About REACH Nationals</h1>
-            <p className="text-xl opacity-90">
-              REACH Nationals is the nonprofit backbone of REACH, created to support and uplift student creators navigating the digital world while in school. With a strong focus on community, education, and mental wellness, we empower the next generation of digital leaders.
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ delay: 0.2 }}
+              className="inline-block mb-4"
+            >
+              <Sparkles className="w-12 h-12 text-reach-gold" />
+            </motion.div>
+            <h1 className="text-4xl md:text-6xl font-bold text-reach-navy mb-4 leading-tight">
+              Our Story
+            </h1>
+            <p className="text-lg md:text-xl text-reach-slate mb-6 max-w-3xl mx-auto leading-relaxed">
+              In a world where creators are becoming entrepreneurs, storytellers, and cultural leaders, one thing has remained true: most student creators are navigating that journey alone.
             </p>
+            <p className="text-lg md:text-xl font-semibold text-reach-gold">
+              That's where REACH began.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Origin Story */}
+      <section className="py-12 bg-reach-cream/10 relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-reach-gold/0 via-reach-gold/20 to-reach-gold/0" />
+        </div>
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="mb-8"
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <Globe className="w-6 h-6 text-reach-gold" />
+                <h2 className="text-sm font-semibold text-reach-gold uppercase tracking-wider">
+                  How It All Started
+                </h2>
+              </div>
+              <h3 className="text-2xl md:text-3xl font-bold text-reach-navy mb-4">
+                The Origin of REACH (2017–2020)
+              </h3>
+              <div className="prose prose-lg text-reach-slate">
+                <p className="text-lg">
+                  Founded in 2017 at the University of Southern California by Markian Benhamou, Xavier Di Petta (of PartyShirt), and a group of like-minded students, REACH emerged at a time when the world of digital influence was rapidly evolving—but few resources existed for the student creators shaping it.
+                </p>
+                <p className="text-lg">
+                  What did exist was raw ambition, creative energy, and a shared belief: student creators needed a place to belong, to grow, and to be taken seriously.
+                </p>
+                <p className="text-lg font-semibold text-reach-gold">
+                  So, they built one.
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="mb-8"
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <Rocket className="w-6 h-6 text-reach-gold" />
+                <h2 className="text-sm font-semibold text-reach-gold uppercase tracking-wider">
+                  A New Era
+                </h2>
+              </div>
+              <h3 className="text-2xl md:text-3xl font-bold text-reach-navy mb-4">
+                National Expansion Begins (2020–2022)
+              </h3>
+              <div className="prose prose-lg text-reach-slate">
+                <p className="text-lg">
+                  In Fall 2020, a new chapter began when Dylan Huey joined REACH during his freshman year at USC. As a creator with millions of followers and a deep background in talent development and digital strategy, Dylan brought a unique lens to the organization.
+                </p>
+                <p className="text-lg">
+                  By Spring 2022, Dylan took over leadership of REACH at USC—and reimagined what REACH could be. He saw that the same challenges student creators faced at USC existed nationwide.
+                </p>
+                <p className="text-lg font-semibold text-reach-gold">
+                  What began as a single chapter evolved into REACH Nationals—a full-scale nonprofit built to support student creators across the country.
+                </p>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Mission Section */}
-      <section className="py-16 md:py-24">
+      {/* Current State */}
+      <section className="py-12 bg-white relative">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Our Mission</h2>
-            <div className="bg-gray-50 p-8 rounded-xl text-center italic text-xl">
-              "To empower student creators by building community, providing opportunity, and creating a structured support system for digital influence in higher education."
-            </div>
-            
-            <div className="mt-16">
-              <h3 className="text-2xl font-bold mb-4">Why REACH Exists</h3>
-              <p className="text-lg text-gray-700 mb-6">
-                REACH Nationals is the first and only collegiate influencer organization, supporting the next generation of digital creators across campuses nationwide. With a strong emphasis on community, education, and creator empowerment, REACH provides a structured space where student influencers can thrive both online and offline—without having to choose between school and social media.
-              </p>
-              <p className="text-lg text-gray-700">
-                We believe that young creators shouldn't have to navigate the complex world of content creation alone. By providing resources, community, and structured support, we're helping shape the future of the creator economy from college campuses across the country.
-              </p>
-            </div>
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="mb-8"
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <Star className="w-6 h-6 text-reach-gold" />
+                <h2 className="text-sm font-semibold text-reach-gold uppercase tracking-wider">
+                  Where We Are Today
+                </h2>
+              </div>
+              <h3 className="text-2xl md:text-3xl font-bold text-reach-navy mb-4">
+                A National Network for Student Creators
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <div className="text-center p-6 bg-reach-cream/10">
+                  <div className="text-4xl font-bold text-reach-gold mb-2">75+</div>
+                  <div className="text-lg text-reach-slate">Universities</div>
+                </div>
+                <div className="text-center p-6 bg-reach-cream/10">
+                  <div className="text-4xl font-bold text-reach-gold mb-2">2,500+</div>
+                  <div className="text-lg text-reach-slate">Active Members</div>
+                </div>
+                <div className="text-center p-6 bg-reach-cream/10">
+                  <div className="text-4xl font-bold text-reach-gold mb-2">350M+</div>
+                  <div className="text-lg text-reach-slate">Social Reach</div>
+                </div>
+              </div>
+              <div className="prose prose-lg text-reach-slate">
+                <p className="text-xl text-reach-slate mb-8">
+                  But REACH is about more than numbers. It's about access. Every student creator in REACH—whether they have 500 followers or 500,000—gains access to:
+                </p>
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-8 text-xl">
+                  <li className="flex items-start gap-4 p-4 bg-reach-cream/5">
+                    <Users className="w-7 h-7 text-reach-gold mt-1 flex-shrink-0" />
+                    <span>Official student org chapters on campus</span>
+                  </li>
+                  <li className="flex items-start gap-4 p-4 bg-reach-cream/5">
+                    <GraduationCap className="w-7 h-7 text-reach-gold mt-1 flex-shrink-0" />
+                    <span>Workshops on contracts and monetization</span>
+                  </li>
+                  <li className="flex items-start gap-4 p-4 bg-reach-cream/5">
+                    <Briefcase className="w-7 h-7 text-reach-gold mt-1 flex-shrink-0" />
+                    <span>Industry mentorship and career pipelines</span>
+                  </li>
+                  <li className="flex items-start gap-4 p-4 bg-reach-cream/5">
+                    <Heart className="w-7 h-7 text-reach-gold mt-1 flex-shrink-0" />
+                    <span>A supportive creator community</span>
+                  </li>
+                </ul>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="grid grid-cols-1 md:grid-cols-2 gap-4"
+            >
+              <div className="bg-reach-cream/10 p-6 relative overflow-hidden group">
+                <div className="absolute inset-0 bg-gradient-to-br from-reach-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <h3 className="text-lg font-bold text-reach-navy mb-4">What We Believe In</h3>
+                <ul className="space-y-3 text-reach-slate">
+                  <li className="flex items-start gap-2">
+                    <Users className="w-5 h-5 text-reach-gold mt-1" />
+                    <span>Student-led leadership</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <GraduationCap className="w-5 h-5 text-reach-gold mt-1" />
+                    <span>Peer-to-peer mentorship</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Heart className="w-5 h-5 text-reach-gold mt-1" />
+                    <span>Authenticity over algorithm chasing</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Target className="w-5 h-5 text-reach-gold mt-1" />
+                    <span>Mental wellness as a foundation</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="bg-reach-cream/10 p-6 relative overflow-hidden group">
+                <div className="absolute inset-0 bg-gradient-to-br from-reach-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <h3 className="text-lg font-bold text-reach-navy mb-4">The REACH Difference</h3>
+                <ul className="space-y-3 text-reach-slate">
+                  <li className="flex items-start gap-2">
+                    <Lightbulb className="w-5 h-5 text-reach-gold mt-1" />
+                    <span>Student-run, not brand-controlled</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Briefcase className="w-5 h-5 text-reach-gold mt-1" />
+                    <span>Long-term development over trends</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Building2 className="w-5 h-5 text-reach-gold mt-1" />
+                    <span>Community building over clout</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Target className="w-5 h-5 text-reach-gold mt-1" />
+                    <span>Treating creators like founders</span>
+                  </li>
+                </ul>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* What We Offer Section */}
-      <section className="py-16 md:py-24 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">What We Offer</h2>
-            <p className="text-lg text-gray-600">
-              REACH provides comprehensive support for student creators through various programs and resources.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <FeatureCard
-              title="University Chapters"
-              description="Our 75+ university chapters operate as official student organizations, giving creators a space to grow together."
-              icon={School}
-            />
-            <FeatureCard
-              title="Creator Education"
-              description="REACH teaches student influencers the business behind social media: contracts, monetization, analytics, negotiations, and more."
-              icon={BookOpen}
-            />
-            <FeatureCard
-              title="Community & Events"
-              description="From national summits to brand activations, we bring creators together for connections, collaboration, and career development."
-              icon={Users}
-            />
-            <FeatureCard
-              title="Mentorship & Growth"
-              description="Our network connects students with industry professionals, mentorship opportunities, internships, and jobs."
-              icon={Brain}
-            />
-            <FeatureCard
-              title="Mental Wellness"
-              description="Mental health is at the core of our work. We prioritize community care, authenticity, and open conversation."
-              icon={Heart}
-            />
-            <FeatureCard
-              title="Analytics & Insights"
-              description="Access to industry data, trends, and analytics to help creators make informed decisions about their content strategy."
-              icon={BarChart}
-            />
-          </div>
+      {/* Future Vision */}
+      <section className="py-12 bg-reach-cream/10 relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-reach-gold/0 via-reach-gold/20 to-reach-gold/0" />
         </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Testimonials</h2>
-            <p className="text-lg text-gray-600">
-              Hear what our members and partners have to say about REACH.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <TestimonialCard
-              quote="REACH has completely transformed how I approach content creation. The community and resources have been invaluable for my growth."
-              name="Sarah Johnson"
-              title="Fashion Creator, UCLA"
-            />
-            <TestimonialCard
-              quote="With REACH, I found a community that understands the unique challenges of being a student creator."
-              name="Michael Chen"
-              title="Tech Content Creator, NYU"
-            />
-            <TestimonialCard
-              quote="Being part of REACH opened doors to incredible opportunities and connections in the industry."
-              name="Ava Williams"
-              title="Lifestyle Creator, University of Texas"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Brand Partnerships */}
-      <section className="py-16 md:py-24 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Brand Partnerships</h2>
-            <p className="text-lg text-gray-600">
-              REACH collaborates with forward-thinking brands to create meaningful opportunities for student creators.
-            </p>
-          </div>
-
-          <div className="bg-white p-8 rounded-xl shadow-lg max-w-4xl mx-auto">
-            <p className="text-lg mb-6">
-              Our brand partnerships focus on creating authentic, value-driven collaborations that benefit both brands and creators. We've worked with companies across industries including technology, fashion, beauty, finance, and more.
-            </p>
-            <p className="text-lg mb-6">
-              Through these partnerships, REACH members gain access to exclusive opportunities, resources, and real-world experience working with established brands.
-            </p>
-            <div className="mt-8 text-center">
-              <Link to="/contact">
-                <Button className="btn-primary">Partner With Us</Button>
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <Rocket className="w-6 h-6 text-reach-gold" />
+                <h2 className="text-sm font-semibold text-reach-gold uppercase tracking-wider">
+                  What's Next
+                </h2>
+              </div>
+              <h3 className="text-2xl md:text-3xl font-bold text-reach-navy mb-4">
+                The Future of REACH
+              </h3>
+              <div className="prose prose-lg text-reach-slate mb-6">
+                <p className="text-lg">
+                  REACH is on track to be in 250+ campuses by the end of 2025. But even more importantly, we're laying the foundation for a future where every university recognizes creators the way they do athletes or entrepreneurs—with infrastructure, education, and support.
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                  <div className="bg-white p-4 rounded-none shadow-sm">
+                    <h4 className="text-base font-semibold text-reach-navy mb-2">The REACH Academy</h4>
+                    <p className="text-reach-slate">A self-guided creator curriculum</p>
+                  </div>
+                  <div className="bg-white p-4 rounded-none shadow-sm">
+                    <h4 className="text-base font-semibold text-reach-navy mb-2">National Tours</h4>
+                    <p className="text-reach-slate">Speaker series and brand showcases</p>
+                  </div>
+                  <div className="bg-white p-4 rounded-none shadow-sm">
+                    <h4 className="text-base font-semibold text-reach-navy mb-2">Industry Advisory Board</h4>
+                    <p className="text-reach-slate">Guiding our long-term impact</p>
+                  </div>
+                  <div className="bg-white p-4 rounded-none shadow-sm">
+                    <h4 className="text-base font-semibold text-reach-navy mb-2">Expanded Partnerships</h4>
+                    <p className="text-reach-slate">With universities, brands, and platforms</p>
+                  </div>
+                </div>
+              </div>
+              <Link
+                to="/join"
+                className="group relative px-6 py-2 bg-reach-gold overflow-hidden inline-flex items-center justify-center"
+              >
+                <div className="absolute inset-0 w-0 bg-white transition-all duration-[250ms] ease-out group-hover:w-full" />
+                <span className="relative text-reach-navy text-base font-semibold group-hover:text-reach-navy flex items-center">
+                  Join the Movement
+                  <ArrowRight className="ml-2 h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
+                </span>
               </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Advisory Boards */}
-      <section className="py-16 md:py-24">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Advisory Boards</h2>
-            <p className="text-lg text-gray-600">
-              Our direction is shaped by top leaders across entertainment, education, marketing, and social media.
-            </p>
-          </div>
-
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold mb-8 text-center">Industry Advisory Board</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-              {industryAdvisors.map((advisor, index) => (
-                <div key={index} className="bg-white p-6 rounded-xl shadow-md text-center">
-                  <img 
-                    src={advisor.image} 
-                    alt={advisor.name} 
-                    className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
-                  />
-                  <h4 className="font-bold text-lg">{advisor.name}</h4>
-                  <p className="text-gray-600 text-sm">{advisor.title}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <h3 className="text-2xl font-bold mb-8 text-center">Creator Advisory Board</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              {creatorAdvisors.map((advisor, index) => (
-                <div key={index} className="bg-white p-6 rounded-xl shadow-md text-center">
-                  <img 
-                    src={advisor.image} 
-                    alt={advisor.name} 
-                    className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
-                  />
-                  <h4 className="font-bold text-lg">{advisor.name}</h4>
-                  <p className="text-gray-600 text-sm">{advisor.title}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 md:py-20 bg-reach-blue text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Join the REACH Community?</h2>
-          <p className="text-xl opacity-90 max-w-3xl mx-auto mb-8">
-            Whether you're a micro-creator, content newbie, or established influencer, there's a place for you here.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/join">
-              <Button className="bg-white text-reach-blue hover:bg-gray-100 text-lg">Join REACH</Button>
-            </Link>
-            <Link to="/contact">
-              <Button variant="outline" className="border-white text-white hover:bg-white/10 text-lg">Contact Us</Button>
-            </Link>
+            </motion.div>
           </div>
         </div>
       </section>
