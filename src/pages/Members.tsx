@@ -21,14 +21,14 @@ const BENEFITS = [
 ];
 
 const Eyebrow = ({ children }: { children: React.ReactNode }) => (
-  <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-reach-goldDark mb-4">
+  <span className="font-dmono inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.2em] text-reach-goldDark mb-4">
     <span className="w-5 h-px bg-reach-gold" />
     {children}
   </span>
 );
 
 const Members = () => (
-  <div className="bg-white">
+  <div className="bg-white font-dm [&_h1]:font-sohne [&_h2]:font-sohne [&_h3]:font-dm [&_h4]:font-dm">
     {/* ── Hero ── */}
     <section className="relative overflow-hidden border-b border-reach-border">
       <div className="absolute inset-0">
@@ -51,7 +51,7 @@ const Members = () => (
             className="lg:col-span-8"
           >
             <Eyebrow>Our Members</Eyebrow>
-            <h1 className="font-grotesk text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.02] tracking-tight mb-6 text-reach-ink">
+            <h1 className="font-sohne text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.02] tracking-tight mb-6 text-reach-ink">
               More than students.
               <br />
               <span className="text-reach-navy">The heart of REACH.</span>
@@ -84,7 +84,7 @@ const Members = () => (
                     className="flex items-baseline justify-between border-b border-reach-border last:border-0 pb-3 last:pb-0"
                   >
                     <span className="text-[10px] uppercase tracking-[0.18em] font-bold text-reach-ink/45">{s.label}</span>
-                    <span className="font-grotesk text-2xl font-bold text-reach-ink">{s.value}</span>
+                    <span className="font-sohne text-2xl font-bold text-reach-ink tabular-nums tracking-tight">{s.value}</span>
                   </div>
                 ))}
               </div>
@@ -105,7 +105,7 @@ const Members = () => (
           className="max-w-4xl mx-auto text-center"
         >
           <Eyebrow>Who's In The Room</Eyebrow>
-          <h2 className="font-grotesk text-3xl md:text-4xl lg:text-5xl font-bold text-reach-ink leading-tight mb-6">
+          <h2 className="font-sohne text-3xl md:text-4xl lg:text-5xl font-bold text-reach-ink leading-tight mb-6">
             They're filming between classes, planning shoots after lectures,{" "}
             <span className="text-reach-navy">and pitching brands from dorm rooms.</span>
           </h2>
@@ -128,7 +128,7 @@ const Members = () => (
         >
           <div>
             <Eyebrow>The Member Mix</Eyebrow>
-            <h2 className="font-grotesk text-3xl md:text-4xl lg:text-5xl font-bold text-reach-ink leading-tight">
+            <h2 className="font-sohne text-3xl md:text-4xl lg:text-5xl font-bold text-reach-ink leading-tight">
               The full creator economy
               <br className="hidden sm:block" /> under <span className="text-reach-navy">one roof.</span>
             </h2>
@@ -156,13 +156,13 @@ const Members = () => (
               transition={{ type: 'spring', stiffness: 350, damping: 20 }}
               className="group bg-white border border-reach-border rounded-xl p-7 relative overflow-hidden cursor-default"
             >
-              <span className="absolute -bottom-3 -right-1 font-grotesk font-black text-[72px] leading-none text-reach-ink/[0.04] select-none group-hover:text-reach-navy/5 transition-colors duration-500">
+              <span className="absolute -bottom-3 -right-1 font-sohne font-black text-[72px] leading-none text-reach-ink/[0.04] select-none group-hover:text-reach-navy/5 transition-colors duration-500">
                 {a.number}
               </span>
-              <span className="inline-block text-[10px] font-bold uppercase tracking-[0.18em] text-reach-goldDark bg-reach-gold/10 px-3 py-1 rounded-full mb-5">
+              <span className="font-dmono inline-block text-[10px] font-medium uppercase tracking-[0.18em] text-reach-goldDark bg-reach-gold/10 px-3 py-1 rounded-full mb-5">
                 {a.tag}
               </span>
-              <h3 className="font-grotesk text-lg font-bold text-reach-ink mb-3 leading-snug group-hover:text-reach-navy transition-colors duration-200">
+              <h3 className="font-dm text-lg font-bold text-reach-ink mb-3 leading-snug group-hover:text-reach-navy transition-colors duration-200">
                 {a.title}
               </h3>
               <p className="text-reach-ink/50 text-sm leading-relaxed">{a.body}</p>
@@ -183,7 +183,7 @@ const Members = () => (
           className="mb-12 max-w-2xl"
         >
           <Eyebrow>In The Wild</Eyebrow>
-          <h2 className="font-grotesk text-3xl md:text-4xl lg:text-5xl font-bold text-reach-ink leading-tight mb-5">
+          <h2 className="font-sohne text-3xl md:text-4xl lg:text-5xl font-bold text-reach-ink leading-tight mb-5">
             Members and the creators{" "}
             <span className="text-reach-navy">who come through our events.</span>
           </h2>
@@ -230,7 +230,7 @@ const Members = () => (
         >
           <div>
             <Eyebrow>What Membership Gets You</Eyebrow>
-            <h2 className="font-grotesk text-3xl md:text-4xl lg:text-5xl font-bold text-reach-ink leading-tight">
+            <h2 className="font-sohne text-3xl md:text-4xl lg:text-5xl font-bold text-reach-ink leading-tight">
               Six things you can't buy.
               <br className="hidden sm:block" /> <span className="text-reach-navy">Only build.</span>
             </h2>
@@ -262,13 +262,13 @@ const Members = () => (
               transition={{ type: 'spring', stiffness: 350, damping: 20 }}
               className="group bg-white border border-reach-border rounded-xl p-7 relative overflow-hidden cursor-default"
             >
-              <span className="absolute -bottom-3 -right-1 font-grotesk font-black text-[72px] leading-none text-reach-ink/[0.04] select-none group-hover:text-reach-navy/5 transition-colors duration-500">
+              <span className="absolute -bottom-3 -right-1 font-sohne font-black text-[72px] leading-none text-reach-ink/[0.04] select-none group-hover:text-reach-navy/5 transition-colors duration-500">
                 {b.number}
               </span>
-              <span className="inline-block text-[10px] font-bold uppercase tracking-[0.18em] text-reach-goldDark bg-reach-gold/10 px-3 py-1 rounded-full mb-5">
+              <span className="font-dmono inline-block text-[10px] font-medium uppercase tracking-[0.18em] text-reach-goldDark bg-reach-gold/10 px-3 py-1 rounded-full mb-5">
                 {b.tag}
               </span>
-              <h3 className="font-grotesk text-lg font-bold text-reach-ink mb-3 leading-snug group-hover:text-reach-navy transition-colors duration-200">
+              <h3 className="font-dm text-lg font-bold text-reach-ink mb-3 leading-snug group-hover:text-reach-navy transition-colors duration-200">
                 {b.title}
               </h3>
               <p className="text-reach-ink/50 text-sm leading-relaxed">{b.body}</p>
@@ -289,7 +289,7 @@ const Members = () => (
           className="max-w-4xl mx-auto text-center"
         >
           <Eyebrow>The Manifesto</Eyebrow>
-          <h2 className="font-grotesk text-3xl md:text-4xl lg:text-5xl font-bold text-reach-ink leading-tight mb-6">
+          <h2 className="font-sohne text-3xl md:text-4xl lg:text-5xl font-bold text-reach-ink leading-tight mb-6">
             Being a REACH member means{" "}
             <span className="text-reach-navy">you're never creating alone.</span>
           </h2>
@@ -304,15 +304,15 @@ const Members = () => (
               "Where influence meets purpose.",
             ].map((line, i) => (
               <div key={i} className="bg-white border border-reach-border rounded-xl p-6">
-                <span className="font-grotesk text-[10px] font-bold uppercase tracking-[0.2em] text-reach-goldDark block mb-2">
+                <span className="font-dmono text-[10px] font-medium uppercase tracking-[0.2em] text-reach-goldDark block mb-2">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <p className="font-grotesk font-bold text-reach-ink text-base leading-snug">{line}</p>
+                <p className="font-dm font-bold text-reach-ink text-base leading-snug">{line}</p>
               </div>
             ))}
           </div>
 
-          <p className="font-grotesk text-3xl md:text-4xl font-bold text-reach-navy tracking-tight">
+          <p className="font-sohne text-3xl md:text-4xl font-bold text-reach-navy tracking-tight">
             This is REACH.
           </p>
         </motion.div>
@@ -340,7 +340,7 @@ const Members = () => (
           className="max-w-3xl"
         >
           <Eyebrow>Become A Member</Eyebrow>
-          <h2 className="font-grotesk text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6 text-reach-ink">
+          <h2 className="font-sohne text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6 text-reach-ink">
             REACH members don't wait{" "}
             <span className="text-reach-navy">for opportunity.</span>
           </h2>
