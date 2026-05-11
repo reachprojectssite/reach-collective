@@ -1,51 +1,42 @@
 import { Link } from 'react-router-dom';
-import { Instagram, Twitter, Linkedin, Facebook, MapPin, Mail, Phone, ExternalLink, Shield, Users, BookOpen, Award } from 'lucide-react';
+import { Instagram, Linkedin } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
+
   return (
-    <footer className="bg-reach-navy text-white">
-      <div className="container mx-auto px-4 py-16">
-        {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-          {/* Mission Statement */}
+    <footer className="bg-reach-offwhite border-t border-reach-border">
+      <div className="container mx-auto px-6 py-10 md:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-10 md:mb-14">
+          {/* Brand */}
           <div className="lg:col-span-2">
-            <p className="text-lg font-light mb-8">
-              Empowering the Next Generation of Creators Through Leadership, Innovation, and Community Since 2023
+            <img src="/Untitled.png" alt="Reach Nationals" className="h-9 w-auto object-contain mb-5" />
+            <p className="text-reach-ink/45 text-sm leading-relaxed max-w-sm mb-7">
+              The national chapter network connecting student creators, filmmakers, founders, and culture-builders at 100+ universities.
             </p>
-            
-            {/* Contact Info */}
-            <div className="mb-8">
-              <h3 className="font-semibold mb-2">National Office</h3>
-              <p className="text-white/80 mb-2">Los Angeles, California</p>
-              <a href="mailto:join@reachnationals.org" className="block text-reach-gold hover:text-white/90 transition-colors mb-1">
-                📧 join@reachnationals.org
-              </a>
-              <a href="mailto:help@reachnationals.org" className="block text-reach-gold hover:text-white/90 transition-colors">
-                📧 help@reachnationals.org
+            <div className="space-y-1.5">
+              <p className="text-reach-ink/30 text-[10px] uppercase tracking-widest font-bold">National Office</p>
+              <p className="text-reach-ink/60 text-sm">Los Angeles, California</p>
+              <a href="mailto:join@reachnationals.org" className="block text-reach-goldDark hover:text-reach-navy text-sm transition-colors font-medium">
+                join@reachnationals.org
               </a>
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Navigate */}
           <div>
-            <h3 className="font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
+            <h3 className="text-[10px] font-bold uppercase tracking-[0.2em] text-reach-ink/30 mb-5">Navigate</h3>
+            <ul className="space-y-2.5">
               {[
-                { text: 'Start a Chapter', href: '/start-chapter' },
-                { text: 'Find Your Chapter', href: '/chapters' },
-                { text: 'Workshops', href: '/workshops' },
-                { text: 'Chapter Standards', href: '/standards' },
-                { text: 'Brand Partnerships', href: '/partnerships' },
-                { text: 'REACH Resources', href: '/resources' },
-                { text: 'Contact Us', href: '/contact' },
+                { text: 'Our Story', href: '/about' },
+                { text: 'Members', href: '/members' },
+                { text: 'Chapters', href: '/chapters' },
+                { text: 'Summit', href: '/summit' },
+                { text: 'Apply to REACH', href: '/join' },
+                { text: 'Contact', href: '/contact' },
               ].map((link) => (
                 <li key={link.href}>
-                  <Link
-                    to={link.href}
-                    className="text-white/80 hover:text-reach-gold transition-colors"
-                  >
+                  <Link to={link.href} className="text-reach-ink/50 hover:text-reach-ink text-sm transition-colors">
                     {link.text}
                   </Link>
                 </li>
@@ -53,37 +44,52 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Our Creed */}
+          {/* Creed + Social */}
           <div>
-            <h3 className="font-semibold mb-4">Our Creed</h3>
-            <p className="text-white/80 italic">
-              "We are the next generation of creators, thinkers, and leaders. We don't wait for permission—we build what's next. Together, we create change, elevate each other, and turn influence into impact."
+            <h3 className="text-[10px] font-bold uppercase tracking-[0.2em] text-reach-ink/30 mb-5">Our Creed</h3>
+            <p className="text-reach-ink/40 text-sm italic leading-relaxed mb-6">
+              "We are the next generation of creators, thinkers, and leaders. We don't wait for permission. We build what's next."
             </p>
+            <div className="flex gap-3">
+              <a
+                href="https://instagram.com/reachnatl"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 flex items-center justify-center rounded-lg bg-white border border-reach-border text-reach-ink/40 hover:text-reach-navy hover:border-reach-navy/30 transition-all"
+              >
+                <Instagram className="w-3.5 h-3.5" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/reach-fam"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 flex items-center justify-center rounded-lg bg-white border border-reach-border text-reach-ink/40 hover:text-reach-navy hover:border-reach-navy/30 transition-all"
+              >
+                <Linkedin className="w-3.5 h-3.5" />
+              </a>
+            </div>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-white/10 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-white/60 text-sm">
-              © 2025 REACH National Corp | Est. 2023
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              {[
-                { text: 'Privacy Policy', href: '/privacy' },
-                { text: 'Terms', href: '/terms' },
-                { text: 'Code of Conduct', href: '/code-of-conduct' },
-                { text: 'Accessibility', href: '/accessibility' },
-              ].map((link) => (
-                <Link
-                  key={link.href}
-                  to={link.href}
-                  className="text-white/60 hover:text-reach-gold text-sm transition-colors"
-                >
-                  {link.text}
-                </Link>
-              ))}
-            </div>
+        {/* Bottom bar */}
+        <div className="border-t border-reach-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-reach-ink/30 text-xs">
+            © {currentYear} Reach Nationals Corp · Est. 2023 · 501(c)(3) Nonprofit
+          </p>
+          <div className="flex gap-5">
+            {[
+              { text: 'Privacy Policy', href: '/privacy' },
+              { text: 'Terms', href: '/terms' },
+              { text: 'Code of Conduct', href: '/code-of-conduct' },
+            ].map((link) => (
+              <Link
+                key={link.href}
+                to={link.href}
+                className="text-reach-ink/30 hover:text-reach-ink/60 text-xs transition-colors"
+              >
+                {link.text}
+              </Link>
+            ))}
           </div>
         </div>
       </div>
@@ -91,4 +97,4 @@ const Footer = () => {
   );
 };
 
-export default Footer; 
+export default Footer;

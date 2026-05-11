@@ -1,130 +1,126 @@
 import { motion } from 'framer-motion';
-import { 
-  Users, 
-  GraduationCap, 
-  CalendarDays, 
-  Heart, 
-  Briefcase,
-  Globe,
-  BookOpen
-} from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
 const features = [
   {
-    icon: GraduationCap,
-    title: "University Chapters",
-    description: "Official student organizations where creators collaborate, share resources, and build meaningful communities—both online and IRL.",
-    color: "bg-reach-navy"
+    number: '01',
+    tag: 'Campus Community',
+    title: 'Your chapter. Your crew.',
+    description:
+      'Official student organizations at 100+ universities. For creators, digital marketers, aspiring talent managers, editors, and anyone building in the creator economy. Weekly meetings, workshops, and collabs, all built around your campus.',
   },
   {
-    icon: BookOpen,
-    title: "Creator Education",
-    description: "Workshops and toolkits covering the business of being a creator: contracts, negotiations, monetization, analytics, branding, and more.",
-    color: "bg-reach-gold"
+    number: '02',
+    tag: 'Creator Education',
+    title: 'The business side nobody teaches.',
+    description:
+      "Contracts. Brand deals. Negotiation. Monetization. Analytics. The stuff your professors don't cover, but that will determine how your career actually goes.",
   },
   {
-    icon: CalendarDays,
-    title: "Community & Events",
-    description: "From national summits to campus activations and brand pop-ups, we bring creators together for unforgettable experiences and creative synergy.",
-    color: "bg-reach-crimson"
+    number: '03',
+    tag: 'Events & Activations',
+    title: 'Experiences worth posting.',
+    description:
+      'National summits, campus brand activations, content shoot days, and creator showcases. Plus appearances at VidCon, SXSW, and CES. The internet starts offline.',
   },
   {
-    icon: Briefcase,
-    title: "Career Growth",
-    description: "Our alumni go on to work at TikTok, Meta, YouTube, agencies, and creator startups. We help build portfolios, resumes, and real industry pipelines.",
-    color: "bg-reach-navy"
+    number: '04',
+    tag: 'Industry Access',
+    title: 'Real pipelines, not cold DMs.',
+    description:
+      "REACH alumni now work at TikTok, Meta, YouTube, Amazon, and major agencies. Our network opens doors that follower counts alone can't.",
   },
   {
-    icon: Globe,
-    title: "National Opportunities",
-    description: "Through REACH Nationals, members gain access to exclusive creator opportunities, brand deals, internships, and national campaigns—only available through REACH.",
-    color: "bg-reach-slate"
+    number: '05',
+    tag: 'Brand Partnerships',
+    title: 'Real life experiences. Actual brands.',
+    description:
+      "We've partnered with Amazon, Disney, Quest Nutrition, Bare Bells, and more to bring exclusive experiences and product collaborations directly to REACH members.",
   },
   {
-    icon: Heart,
-    title: "Mental Wellness",
-    description: "Founded with mental health at our core, REACH prioritizes peer support, creative balance, and healthy relationships with social media.",
-    color: "bg-reach-navy"
-  }
+    number: '06',
+    tag: 'Creator Wellbeing',
+    title: 'Built to last, not just to post.',
+    description:
+      "REACH was built with mental health at its core. A creator who burns out isn't a creator for long. We build sustainable careers, not just content schedules.",
+  },
 ];
 
 const container = {
   hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2
-    }
-  }
+  show: { opacity: 1, transition: { staggerChildren: 0.08 } },
 };
 
 const item = {
   hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0 }
+  show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.16, 1, 0.3, 1] } },
 };
 
 const Features = () => {
   return (
-    <section className="relative py-24 overflow-hidden bg-white">
-      {/* Background Elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute -left-1/4 -top-1/4 w-1/2 h-1/2 bg-reach-cream rounded-full opacity-20 blur-3xl" />
-        <div className="absolute -right-1/4 -bottom-1/4 w-1/2 h-1/2 bg-reach-gold/20 rounded-full opacity-20 blur-3xl" />
-      </div>
-
-      <div className="container mx-auto px-4 relative">
-        {/* Section Header */}
+    <section className="bg-reach-offwhite py-14 md:py-24 border-t border-reach-border">
+      <div className="container mx-auto px-6">
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-20"
+          transition={{ duration: 0.6 }}
+          className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14"
         >
-          <h2 className="text-sm font-semibold text-reach-gold uppercase tracking-wider mb-3">
-            What We Offer
-          </h2>
-          <h3 className="font-display text-4xl md:text-5xl font-bold text-reach-navy mb-6">
-            REACH is the nation's first and only student-led creator economy organization.
-          </h3>
-          <p className="text-xl text-reach-slate max-w-3xl mx-auto">
-            We provide student influencers and marketers with the structure, support, and opportunities they need to grow their platforms and their potential on campus, online, and in their careers.
-          </p>
+          <div>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-reach-goldDark mb-4 block">
+              What You Get
+            </span>
+            <h2 className="font-grotesk text-3xl md:text-4xl lg:text-5xl font-bold text-reach-ink leading-tight">
+              Everything the creator economy
+              <br className="hidden sm:block" /> requires. Nothing it doesn't.
+            </h2>
+          </div>
+          <Link
+            to="/join"
+            className="group flex-shrink-0 inline-flex items-center gap-2 text-reach-navy text-sm font-semibold hover:gap-3 transition-all"
+          >
+            Apply now
+            <ArrowRight className="w-4 h-4" />
+          </Link>
         </motion.div>
 
-        {/* Features Grid */}
+        {/* Grid */}
         <motion.div
           variants={container}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
         >
-          {features.map((feature, index) => (
+          {features.map((f, i) => (
             <motion.div
-              key={index}
+              key={i}
               variants={item}
-              className="group relative bg-white p-8 rounded-none border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300"
+              whileHover={{ y: -8, scale: 1.02, boxShadow: '0 20px 40px -12px rgba(0,0,0,0.12)' }}
+              transition={{ type: 'spring', stiffness: 350, damping: 20 }}
+              className="group bg-white border border-reach-border rounded-xl p-7 relative overflow-hidden cursor-default"
             >
-              {/* Hover Effect Border */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-reach-navy to-reach-gold transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
-                <div className="absolute top-0 right-0 w-1 h-full bg-gradient-to-b from-reach-gold to-reach-gold transform origin-top scale-y-0 group-hover:scale-y-100 transition-transform duration-500" />
-                <div className="absolute bottom-0 right-0 w-full h-1 bg-gradient-to-l from-reach-navy to-reach-gold transform origin-right scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
-                <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-reach-gold to-reach-gold transform origin-bottom scale-y-0 group-hover:scale-y-100 transition-transform duration-500" />
-              </div>
+              {/* Background number */}
+              <span className="absolute -bottom-3 -right-1 font-grotesk font-black text-[72px] leading-none text-reach-ink/[0.04] select-none group-hover:text-reach-navy/5 transition-colors duration-500">
+                {f.number}
+              </span>
 
-              {/* Icon */}
-              <div className={`${feature.color} w-12 h-12 rounded-none flex items-center justify-center mb-6 transform group-hover:scale-110 transition-transform duration-300`}>
-                <feature.icon className="w-6 h-6 text-white" />
-              </div>
+              {/* Tag */}
+              <span className="inline-block text-[10px] font-bold uppercase tracking-[0.18em] text-reach-goldDark bg-reach-gold/10 px-3 py-1 rounded-full mb-5">
+                {f.tag}
+              </span>
 
-              {/* Content */}
-              <h4 className="font-serif text-xl font-bold text-reach-navy mb-4 group-hover:text-reach-gold transition-colors duration-300">
-                {feature.title}
-              </h4>
-              <p className="text-reach-slate group-hover:text-reach-navy transition-colors duration-300">
-                {feature.description}
+              {/* Title */}
+              <h3 className="font-grotesk text-lg font-bold text-reach-ink mb-3 leading-snug group-hover:text-reach-navy transition-colors duration-200">
+                {f.title}
+              </h3>
+
+              {/* Description */}
+              <p className="text-reach-ink/50 text-sm leading-relaxed">
+                {f.description}
               </p>
             </motion.div>
           ))}
@@ -134,4 +130,4 @@ const Features = () => {
   );
 };
 
-export default Features; 
+export default Features;

@@ -1,223 +1,409 @@
-import React from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Users, BookOpen, Calendar, Megaphone, Target } from "lucide-react";
 import { Link } from "react-router-dom";
+import { ArrowRight, GraduationCap, Users, MapPin, Info } from "lucide-react";
 
-const Chapters = () => {
-  return (
-    <div className="bg-white">
-      {/* Hero Section */}
-      <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute -left-1/4 -top-1/4 w-1/2 h-1/2 bg-reach-cream rounded-full opacity-20 blur-3xl" />
-          <div className="absolute -right-1/4 -bottom-1/4 w-1/2 h-1/2 bg-reach-gold/20 rounded-full opacity-20 blur-3xl" />
-        </div>
-        
-        <div className="container mx-auto px-4">
+const CAMPUS_CHAPTERS = [
+  "Cal State Northridge",
+  "Chapman University",
+  "Emmanuel University",
+  "Florida State University",
+  "Loyola Marymount University",
+  "Middle Tennessee State University",
+  "Penn State University",
+  "Univ. of Illinois Urbana-Champaign",
+  "University of California, Irvine",
+  "University of California, Los Angeles",
+  "University of California, San Diego",
+  "University of Michigan",
+  "University of Pennsylvania",
+  "University of Southern California",
+  "University of Washington",
+];
+
+const REGIONAL_CHAPTERS = [
+  { city: "Bay Area",     state: "CA" },
+  { city: "Chicago",      state: "IL" },
+  { city: "Los Angeles",  state: "CA" },
+  { city: "Miami",        state: "FL" },
+  { city: "New York",     state: "NY" },
+];
+
+const PATHS = [
+  {
+    number: "01",
+    tag: "I'm in college",
+    title: "Join the chapter on your campus.",
+    body: "If REACH is already at your school, the move is simple: apply, show up, get involved. Connect with creators on your campus who are already building, and level up alongside them.",
+    cta: "Find your chapter",
+    href: "/join?path=join",
+    icon: Users,
+  },
+  {
+    number: "02",
+    tag: "I'm in college (no chapter)",
+    title: "Start a chapter at your school.",
+    body: "If REACH isn't at your university yet, be the one who brings it. You'll get full national support: branding, playbooks, mentorship, and access to the entire REACH network from day one.",
+    cta: "Start a chapter",
+    href: "/join?path=start",
+    icon: GraduationCap,
+  },
+  {
+    number: "03",
+    tag: "Post-grad, industry, or non-student",
+    title: "Pioneer a city chapter.",
+    body: "REACH is expanding into regional chapters in LA, NY, Miami, the Bay Area, and Chicago. Open to creators, industry leaders, and creator economy enthusiasts. These are the first of their kind.",
+    cta: "Express interest",
+    href: "/join?path=regional",
+    icon: MapPin,
+  },
+];
+
+const Eyebrow = ({ children }: { children: React.ReactNode }) => (
+  <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-reach-goldDark mb-4">
+    <span className="w-5 h-px bg-reach-gold" />
+    {children}
+  </span>
+);
+
+const Chapters = () => (
+  <div className="bg-white">
+    {/* ── Hero ── */}
+    <section className="relative overflow-hidden border-b border-reach-border">
+      <div className="absolute inset-0">
+        <img
+          src="/images/Photos/usc group photo.jpg"
+          alt="REACH chapter members"
+          className="w-full h-full object-cover object-[center_35%]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-white/75 via-white/55 to-reach-offwhite/70" />
+        <div className="absolute inset-0 bg-gradient-to-t from-white/80 via-transparent to-transparent" />
+        <div className="absolute -right-32 -top-32 w-[480px] h-[480px] bg-reach-gold/20 rounded-full blur-[120px]" />
+      </div>
+
+      <div className="container mx-auto px-6 relative">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-end pt-16 pb-20 md:pt-24 md:pb-28">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            className="lg:col-span-8"
           >
-            <h1 className="text-4xl md:text-6xl font-bold text-reach-navy mb-6">
-              Our Chapters
+            <Eyebrow>Chapters</Eyebrow>
+            <h1 className="font-grotesk text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.02] tracking-tight mb-6 text-reach-ink">
+              Not just a campus club.
+              <br />
+              <span className="text-reach-navy">A national movement.</span>
             </h1>
-            <p className="text-xl text-reach-slate mb-12">
-              REACH chapters are vibrant communities of creators at universities across the nation. Each chapter operates as an official student organization, supported by REACH Nationals with resources, opportunities, and infrastructure.
+            <p className="text-reach-ink/55 text-base sm:text-lg max-w-2xl leading-relaxed">
+              Reach Nationals is a national creator economy organization. Chapters are how we show up locally,{" "}
+              <span className="text-reach-navy font-semibold">on every campus and in every major creator city.</span>
             </p>
           </motion.div>
 
-          {/* Stats */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto mt-16"
+            transition={{ duration: 0.6, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+            className="lg:col-span-4"
           >
-            {[
-              { label: "Active Chapters", value: "75+" },
-              { label: "Student Creators", value: "2,500+" },
-              { label: "Social Reach", value: "350M+" },
-              { label: "2025 Goal", value: "250+" }
-            ].map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl font-bold text-reach-gold mb-2">{stat.value}</div>
-                <div className="text-sm text-reach-slate uppercase tracking-wider">{stat.label}</div>
+            <div className="bg-white border border-reach-border rounded-xl p-6 shadow-lg shadow-black/5">
+              <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-reach-goldDark mb-5 block">
+                The Network
+              </span>
+              <div className="space-y-3">
+                {[
+                  { label: "Active Campus Chapters", value: "100+" },
+                  { label: "Regional Chapters",      value: "5" },
+                  { label: "States Represented",     value: "20+" },
+                  { label: "Combined Reach",         value: "500M+" },
+                ].map((s, i) => (
+                  <div
+                    key={i}
+                    className="flex items-baseline justify-between border-b border-reach-border last:border-0 pb-3 last:pb-0"
+                  >
+                    <span className="text-[10px] uppercase tracking-[0.18em] font-bold text-reach-ink/45">{s.label}</span>
+                    <span className="font-grotesk text-2xl font-bold text-reach-ink">{s.value}</span>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </motion.div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      {/* Chapter Structure */}
-      <section className="py-24 bg-reach-cream/10">
-        <div className="container mx-auto px-4">
+    {/* ── Three Paths ── */}
+    <section className="bg-white py-14 md:py-24 border-t border-reach-border">
+      <div className="container mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14"
+        >
+          <div>
+            <Eyebrow>Three Ways In</Eyebrow>
+            <h2 className="font-grotesk text-3xl md:text-4xl lg:text-5xl font-bold text-reach-ink leading-tight">
+              There's a chapter for{" "}
+              <span className="text-reach-navy">where you are.</span>
+            </h2>
+          </div>
+          <p className="text-reach-ink/50 text-base max-w-sm leading-relaxed md:text-right">
+            Pick the path that matches you right now. Each one has the same goal: get you building alongside the people who are doing the work.
+          </p>
+        </motion.div>
+
+        <motion.div
+          variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.08 } } }}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-5"
+        >
+          {PATHS.map((p, i) => (
+            <motion.div
+              key={i}
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.16, 1, 0.3, 1] } },
+              }}
+              whileHover={{ y: -8, scale: 1.02, boxShadow: '0 20px 40px -12px rgba(0,0,0,0.12)' }}
+              transition={{ type: 'spring', stiffness: 350, damping: 20 }}
+              className="group bg-white border border-reach-border rounded-xl p-7 relative overflow-hidden flex flex-col"
+            >
+              <span className="absolute -bottom-3 -right-1 font-grotesk font-black text-[72px] leading-none text-reach-ink/[0.04] select-none group-hover:text-reach-navy/5 transition-colors duration-500">
+                {p.number}
+              </span>
+              <span className="inline-block w-fit text-[10px] font-bold uppercase tracking-[0.18em] text-reach-goldDark bg-reach-gold/10 px-3 py-1 rounded-full mb-5">
+                {p.tag}
+              </span>
+              <p.icon className="w-5 h-5 text-reach-goldDark mb-4 group-hover:text-reach-navy transition-colors" />
+              <h3 className="font-grotesk text-lg font-bold text-reach-ink mb-3 leading-snug group-hover:text-reach-navy transition-colors duration-200">
+                {p.title}
+              </h3>
+              <p className="text-reach-ink/50 text-sm leading-relaxed mb-6 flex-1">{p.body}</p>
+              <Link
+                to={p.href}
+                className="inline-flex items-center gap-2 text-sm font-bold text-reach-navy hover:gap-3 transition-all"
+              >
+                {p.cta}
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+
+    {/* ── Photo strip ── */}
+    <section className="bg-reach-offwhite py-14 md:py-24 border-t border-reach-border">
+      <div className="container mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-12 max-w-2xl"
+        >
+          <Eyebrow>Chapters In Motion</Eyebrow>
+          <h2 className="font-grotesk text-3xl md:text-4xl lg:text-5xl font-bold text-reach-ink leading-tight">
+            Built and run{" "}
+            <span className="text-reach-navy">by the students themselves.</span>
+          </h2>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4"
+        >
+          {[
+            { src: "/images/Photos/Four Female Students at a reach event.jpeg", alt: "REACH chapter members",   position: "object-center" },
+            { src: "/images/Photos/Students at Event.jpeg",                       alt: "REACH campus event",     position: "object-center" },
+            { src: "/images/Photos/Three Students Photoshoot.jpg",                alt: "REACH creators on campus", position: "object-[center_30%]" },
+          ].map((photo, i) => (
+            <div key={i} className="aspect-[4/3] rounded-xl overflow-hidden group">
+              <img
+                src={photo.src}
+                alt={photo.alt}
+                className={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ${photo.position}`}
+              />
+            </div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+
+    {/* ── Current campus chapters ── */}
+    <section className="bg-white py-14 md:py-24 border-t border-reach-border">
+      <div className="container mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12"
+        >
+          <div>
+            <Eyebrow>Campus Chapters</Eyebrow>
+            <h2 className="font-grotesk text-3xl md:text-4xl lg:text-5xl font-bold text-reach-ink leading-tight">
+              We might already be{" "}
+              <span className="text-reach-navy">at your school.</span>
+            </h2>
+          </div>
+          <p className="text-reach-ink/50 text-base max-w-sm leading-relaxed md:text-right">
+            Featured chapters below. We're at 100+ universities and growing fast.
+          </p>
+        </motion.div>
+
+        <motion.div
+          variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.025 } } }}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="flex flex-wrap gap-2.5 md:gap-3"
+        >
+          {CAMPUS_CHAPTERS.map((u, i) => (
+            <motion.span
+              key={i}
+              variants={{ hidden: { opacity: 0, y: 8 }, show: { opacity: 1, y: 0, transition: { duration: 0.35 } } }}
+              className="font-grotesk font-semibold text-sm text-reach-ink bg-reach-offwhite border border-reach-border px-5 py-2.5 rounded-full hover:border-reach-navy/30 hover:bg-white hover:text-reach-navy transition-all"
+            >
+              {u}
+            </motion.span>
+          ))}
+          <motion.span
+            variants={{ hidden: { opacity: 0, y: 8 }, show: { opacity: 1, y: 0, transition: { duration: 0.35 } } }}
+            className="font-grotesk font-semibold text-sm text-reach-ink/45 bg-reach-offwhite border border-reach-border px-5 py-2.5 rounded-full"
+          >
+            + 85 more
+          </motion.span>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mt-10 flex items-start gap-4 bg-reach-gold/10 border border-reach-gold/30 rounded-xl px-6 py-5"
+        >
+          <Info className="w-5 h-5 text-reach-goldDark flex-shrink-0 mt-0.5" />
+          <p className="text-reach-ink/75 text-sm leading-relaxed">
+            <span className="font-semibold text-reach-ink">Don't see your school?</span> Before applying, check your university's recognized student organization list. Some chapters also have a dedicated Instagram you can search for.
+          </p>
+        </motion.div>
+      </div>
+    </section>
+
+    {/* ── Regional chapters ── */}
+    <section className="bg-reach-offwhite py-14 md:py-24 border-t border-reach-border">
+      <div className="container mx-auto px-6">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            transition={{ duration: 0.6 }}
+            className="md:col-span-6 lg:col-span-5"
           >
-            <h2 className="text-sm font-semibold text-reach-gold uppercase tracking-wider mb-3">
-              Chapter Structure
+            <Eyebrow>Regional Chapters</Eyebrow>
+            <h2 className="font-grotesk text-3xl md:text-4xl lg:text-5xl font-bold text-reach-ink leading-tight mb-5">
+              REACH is coming{" "}
+              <span className="text-reach-navy">to your city.</span>
             </h2>
-            <h3 className="text-3xl md:text-4xl font-bold text-reach-navy mb-6">
-              How Chapters Work
-            </h3>
-            <p className="text-xl text-reach-slate max-w-3xl mx-auto">
-              Each REACH chapter follows a proven structure that combines leadership development with creator empowerment.
+            <p className="text-reach-ink/55 text-base md:text-lg leading-relaxed mb-6">
+              Beyond campus, REACH is building regional chapters across the country. Open to creators, industry leaders, and creator economy enthusiasts in that city, whether you're in school or not. These are the first of their kind.
             </p>
+            <p className="text-reach-navy font-semibold text-base mb-8">
+              Want to pioneer one? We're looking for the right people.
+            </p>
+            <Link
+              to="/join?path=regional"
+              className="group inline-flex items-center gap-2 bg-reach-navy text-white text-sm font-bold px-7 py-3.5 rounded-lg hover:bg-reach-navy/90 transition-colors"
+            >
+              Express interest
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+            </Link>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {[
-              {
-                title: "Leadership Team",
-                icon: Users,
-                description: "Led by student Presidents and Executive Boards who guide chapter vision and operations."
-              },
-              {
-                title: "Regular Events",
-                icon: Calendar,
-                description: "Host workshops, content creation days, brand collaborations, and social gatherings."
-              },
-              {
-                title: "Educational Focus",
-                icon: BookOpen,
-                description: "Regular sessions on creator business skills, platform growth, and industry insights."
-              },
-              {
-                title: "Brand Partnerships",
-                icon: Target,
-                description: "Access to exclusive brand deals and sponsored content opportunities."
-              },
-              {
-                title: "Campus Presence",
-                icon: Megaphone,
-                description: "Official student organization status with university recognition and support."
-              }
-            ].map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-white p-8 rounded-none border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 group"
-              >
-                <feature.icon className="w-8 h-8 text-reach-gold mb-4" />
-                <h4 className="text-xl font-bold text-reach-navy mb-4">{feature.title}</h4>
-                <p className="text-reach-slate">{feature.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* National Support */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.06 } } }}
+            initial="hidden"
+            whileInView="show"
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            className="md:col-span-6 lg:col-span-7 space-y-3"
           >
-            <h2 className="text-sm font-semibold text-reach-gold uppercase tracking-wider mb-3">
-              National Support
-            </h2>
-            <h3 className="text-3xl md:text-4xl font-bold text-reach-navy mb-6">
-              What Chapters Receive
-            </h3>
-            <p className="text-xl text-reach-slate max-w-3xl mx-auto">
-              REACH Nationals provides comprehensive support to ensure chapter success.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {[
-              "Branding & Templates",
-              "Creator Opportunities",
-              "National Slack Community",
-              "Regular Newsletter",
-              "Chapter Playbooks",
-              "Event Support"
-            ].map((support, index) => (
+            {REGIONAL_CHAPTERS.map((r, i) => (
               <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-white p-6 rounded-none border border-gray-100 text-center group hover:border-reach-gold transition-colors"
+                key={i}
+                variants={{ hidden: { opacity: 0, x: 16 }, show: { opacity: 1, x: 0, transition: { duration: 0.5 } } }}
+                className="flex items-center justify-between bg-white border border-reach-border rounded-xl px-6 py-4 hover:border-reach-navy/30 hover:shadow-sm transition-all group"
               >
-                <h4 className="text-lg font-bold text-reach-navy group-hover:text-reach-gold transition-colors">
-                  {support}
-                </h4>
+                <div className="flex items-center gap-4">
+                  <MapPin className="w-4 h-4 text-reach-ink/25 group-hover:text-reach-navy transition-colors" />
+                  <span className="font-grotesk font-bold text-reach-ink text-base">{r.city}</span>
+                  <span className="text-reach-ink/35 text-sm">{r.state}</span>
+                </div>
+                <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-reach-goldDark bg-reach-gold/10 px-3 py-1 rounded-full">
+                  Pioneer
+                </span>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      {/* CTA Section */}
-      <section className="py-24 bg-reach-navy text-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
-            {/* Start a Chapter */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <h3 className="text-2xl font-bold mb-4">Start a Chapter</h3>
-              <p className="text-white/90 mb-8">
-                Want to bring REACH to your campus? We'll help you every step of the way.
-              </p>
-              <Link
-                to="/start-chapter"
-                className="group relative px-8 py-3 bg-reach-gold overflow-hidden inline-block"
-              >
-                <div className="absolute inset-0 w-0 bg-white transition-all duration-[250ms] ease-out group-hover:w-full" />
-                <span className="relative flex items-center justify-center text-reach-navy text-lg font-semibold group-hover:text-reach-navy">
-                  Apply Now
-                  <ArrowRight className="ml-2 h-5 w-5 transform group-hover:translate-x-1 transition-transform" />
-                </span>
-              </Link>
-            </motion.div>
+    {/* ── CTA ── */}
+    <section className="relative overflow-hidden border-t border-reach-border">
+      <div className="absolute inset-0">
+        <img
+          src="/images/Photos/four members.jpg"
+          alt="REACH community"
+          className="w-full h-full object-cover object-[center_15%]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-reach-offwhite/90 via-white/80 to-reach-offwhite/90" />
+        <div className="absolute -right-32 -bottom-32 w-[420px] h-[420px] bg-reach-gold/15 rounded-full blur-[120px]" />
+      </div>
 
-            {/* Join Existing Chapter */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-center"
+      <div className="container mx-auto px-6 relative py-14 md:py-24">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="max-w-3xl"
+        >
+          <Eyebrow>Don't See Your School?</Eyebrow>
+          <h2 className="font-grotesk text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6 text-reach-ink">
+            Be the one{" "}
+            <span className="text-reach-navy">who brings it.</span>
+          </h2>
+          <p className="text-reach-ink/55 text-base md:text-lg leading-relaxed mb-8 max-w-2xl">
+            We'll back you. National support, brand templates, mentorship, and connections from day one. The hardest part is just saying yes.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <Link
+              to="/join"
+              className="group inline-flex items-center justify-center gap-2 bg-reach-navy text-white font-bold text-sm px-7 py-3.5 rounded-lg hover:bg-reach-navy/90 transition-colors"
             >
-              <h3 className="text-2xl font-bold mb-4">Join a Chapter</h3>
-              <p className="text-white/90 mb-8">
-                Already have REACH on your campus? Connect with your local chapter.
-              </p>
-              <Link
-                to="/find-chapter"
-                className="group relative px-8 py-3 overflow-hidden border-2 border-white inline-block"
-              >
-                <div className="absolute inset-0 w-0 bg-white transition-all duration-[250ms] ease-out group-hover:w-full" />
-                <span className="relative text-white text-lg font-semibold group-hover:text-reach-navy">
-                  Find Your Chapter
-                </span>
-              </Link>
-            </motion.div>
+              Apply to REACH
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+            </Link>
+            <Link
+              to="/about"
+              className="inline-flex items-center justify-center gap-2 text-reach-ink font-medium text-sm px-7 py-3.5 rounded-lg border border-reach-border hover:bg-reach-offwhite transition-colors"
+            >
+              Read our story
+            </Link>
           </div>
-        </div>
-      </section>
-    </div>
-  );
-};
+        </motion.div>
+      </div>
+    </section>
+  </div>
+);
 
-export default Chapters; 
+export default Chapters;

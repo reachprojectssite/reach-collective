@@ -1,92 +1,115 @@
+import { useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { ArrowRight, Star, Users, Target } from 'lucide-react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
+
+const pillars = [
+  { label: 'Community', desc: 'Stop building alone' },
+  { label: 'Education', desc: 'Know your worth' },
+  { label: 'Access', desc: 'Open the right doors' },
+];
 
 const CallToAction = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['start end', 'end start'],
+  });
+  const bgY = useTransform(scrollYProgress, [0, 1], ['-10%', '15%']);
+
   return (
-    <div className="relative">
-      {/* Background Image */}
+    <div ref={ref} className="relative overflow-hidden bg-reach-navy">
+      {/* Background image: very dark navy treatment */}
       <div className="absolute inset-0">
-        <img
+        <motion.img
+          style={{ y: bgY }}
           src="/images/group-photo.jpg"
-          alt="REACH community members in red shirts"
-          className="w-full h-full object-cover object-center"
+          alt="REACH community"
+          className="w-full h-[120%] -top-[10%] absolute inset-x-0 object-cover object-center opacity-40 will-change-transform"
         />
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-          className="absolute inset-0 bg-gradient-to-br from-reach-navy/90 via-reach-navy/85 to-reach-gold/70"
-        />
-        {/* Decorative Pattern */}
-        <div className="absolute inset-0 bg-[url('/patterns/grid.svg')] opacity-5" />
+        <div className="absolute inset-0 bg-gradient-to-br from-reach-navy/90 via-reach-navy/80 to-reach-navy/60" />
       </div>
 
-      {/* Content */}
-      <div className="relative py-24 px-6">
-        <div className="max-w-4xl mx-auto text-center">
+      <div className="relative py-14 md:py-28 px-6">
+        <div className="container mx-auto max-w-4xl">
+          {/* Label */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
+            className="mb-8"
           >
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-white mb-6">
-              Commit to
-              <span className="block italic mt-2 bg-gradient-to-r from-reach-gold via-white to-reach-gold bg-clip-text text-transparent">
-                Excellence
-              </span>
-            </h2>
-
-            <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
-              Join a nationwide network of collegiate creatives who are shaping the future of digital influence. Together, we're building a community that values innovation, leadership, and authentic storytelling.
-            </p>
+            <span className="inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-white/40">
+              <span className="w-8 h-px bg-reach-gold/50" />
+              Ready to build?
+            </span>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          {/* Headline */}
+          <motion.h2
+            initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex justify-center"
+            transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+            className="font-grotesk text-4xl sm:text-5xl md:text-7xl font-bold text-white leading-[0.95] tracking-tight mb-8"
+          >
+            The creator economy
+            <br />
+            starts on{' '}
+            <span className="text-reach-gold">campus.</span>
+          </motion.h2>
+
+          {/* Sub-copy */}
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-white/50 text-lg max-w-2xl mb-12 leading-relaxed"
+          >
+            Most creators begin with a peer group. A campus. A roommate who edits. A friend with a camera. REACH is built around that reality: 100 universities, 5,000 members, one network that has your back.
+          </motion.p>
+
+          {/* CTAs */}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="flex flex-col sm:flex-row items-start gap-4 mb-16"
           >
             <Link
               to="/join"
-              className="group relative px-8 py-3 bg-reach-gold overflow-hidden"
+              className="group inline-flex items-center gap-2 bg-reach-gold text-reach-navy font-bold text-sm px-8 py-4 rounded-lg hover:bg-yellow-300 transition-colors"
             >
-              <div className="absolute inset-0 w-0 bg-white transition-all duration-[250ms] ease-out group-hover:w-full" />
-              <span className="relative flex items-center justify-center text-reach-navy text-lg font-semibold group-hover:text-reach-navy">
-                Begin Your Journey
-                <ArrowRight className="ml-2 h-5 w-5 transform group-hover:translate-x-1 transition-transform" />
-              </span>
+              Apply to REACH
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+            </Link>
+            <Link
+              to="/chapters"
+              className="inline-flex items-center gap-2 text-white/60 font-medium text-sm px-8 py-4 rounded-lg border border-white/15 hover:border-white/30 hover:text-white transition-all"
+            >
+              Find your chapter
             </Link>
           </motion.div>
 
-          {/* Decorative Elements */}
+          {/* Three pillars */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8 text-center text-white/90"
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="flex flex-col sm:flex-row gap-8 border-t border-white/10 pt-10"
           >
-            {[
-              { title: "Purpose", subtitle: "Lead with Vision", icon: Target },
-              { title: "Community", subtitle: "Build Together", icon: Users },
-              { title: "Impact", subtitle: "Create Change", icon: Star }
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 300 }}
-                className="group bg-white/5 backdrop-blur-sm p-6 rounded-lg"
-              >
-                <item.icon className="w-8 h-8 text-reach-gold mx-auto mb-4" />
-                <div className="text-2xl font-serif font-bold mb-2">{item.title}</div>
-                <div className="text-sm uppercase tracking-wider text-reach-gold group-hover:text-white transition-colors">
-                  {item.subtitle}
+            {pillars.map((p, i) => (
+              <div key={i} className="flex items-center gap-4">
+                <span className="w-px h-8 bg-reach-gold/40 flex-shrink-0" />
+                <div>
+                  <p className="font-grotesk font-bold text-white text-sm">{p.label}</p>
+                  <p className="text-white/35 text-xs mt-0.5">{p.desc}</p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </motion.div>
         </div>
@@ -95,4 +118,4 @@ const CallToAction = () => {
   );
 };
 
-export default CallToAction; 
+export default CallToAction;

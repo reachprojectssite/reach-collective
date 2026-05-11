@@ -53,7 +53,7 @@ const WhatWeDo = () => {
             variants={fadeInUp}
             className="text-xl sm:text-2xl text-reach-navy/80 font-light max-w-3xl mx-auto"
           >
-            REACH is the nation's first and only student-led creator economy organization, providing the structure and support you need to thrive.
+            Reach Nationals is the nation's first and only student-led creator economy organization, providing the structure and support you need to thrive.
           </motion.p>
         </motion.div>
 

@@ -38,7 +38,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center">
-            <span className="text-reach-blue font-display font-bold text-2xl lg:text-3xl">REACH</span>
+            <span className="text-reach-blue font-display font-bold text-2xl lg:text-3xl">Reach Nationals</span>
           </Link>
           
           {/* Desktop Navigation */}

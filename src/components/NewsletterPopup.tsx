@@ -62,7 +62,7 @@ const NewsletterPopup = () => {
         
         <div className="text-center mb-6">
           <h2 className="text-2xl font-bold mb-2">Join Our Newsletter</h2>
-          <p className="text-gray-600">Stay updated with the latest news, events, and opportunities from REACH Nationals.</p>
+          <p className="text-gray-600">Stay updated with the latest news, events, and opportunities from Reach Nationals.</p>
         </div>
         
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -85,7 +85,7 @@ const NewsletterPopup = () => {
           </Button>
           
           <p className="text-xs text-gray-500 text-center">
-            By subscribing, you agree to our privacy policy and consent to receive updates from REACH Nationals.
+            By subscribing, you agree to our privacy policy and consent to receive updates from Reach Nationals.
           </p>
         </form>
       </div>
