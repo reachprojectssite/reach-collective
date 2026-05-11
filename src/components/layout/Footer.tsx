@@ -76,8 +76,9 @@ const Footer = () => {
           <p className="text-reach-ink/30 text-xs">
             © {currentYear} Reach Nationals Corp · Est. 2023 · 501(c)(3) Nonprofit
           </p>
-          <div className="flex gap-5">
+          <div className="flex flex-wrap justify-center gap-5">
             {[
+              { text: 'Journal', href: '/blog' },
               { text: 'Privacy Policy', href: '/privacy' },
               { text: 'Terms', href: '/terms' },
               { text: 'Code of Conduct', href: '/code-of-conduct' },

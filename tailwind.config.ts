@@ -141,12 +141,15 @@ export default {
 				'marquee-reverse': 'marquee-reverse 35s linear infinite',
 			},
 			fontFamily: {
-				'sans': ['Inter', 'sans-serif'],
+				'sans': ['DM Sans', 'sans-serif'],
 				'serif': ['Playfair Display', 'serif'],
 				'display': ['Cinzel', 'serif'],
-				'grotesk': ['Space Grotesk', 'sans-serif'],
+				'grotesk': ['Hanken Grotesk', 'sans-serif'],
+				'dm': ['DM Sans', 'sans-serif'],
+				'sohne': ['Hanken Grotesk', 'sans-serif'],
+				'dmono': ['DM Mono', 'ui-monospace', 'monospace'],
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 } satisfies Config;

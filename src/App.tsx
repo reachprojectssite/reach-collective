@@ -23,6 +23,8 @@ import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 import CodeOfConduct from './pages/CodeOfConduct';
 import Summit from './pages/Summit';
+import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
 
 const HomePage = () => (
   <main>
@@ -57,6 +59,8 @@ const App = () => (
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/code-of-conduct" element={<CodeOfConduct />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
