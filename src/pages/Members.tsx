@@ -197,21 +197,21 @@ const Members = () => (
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="grid grid-cols-2 md:grid-cols-4 grid-rows-2 gap-3 md:gap-4 h-[440px] md:h-[560px]"
+          className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-3 md:gap-4 md:h-[560px]"
         >
-          <div className="col-span-2 row-span-2 rounded-xl overflow-hidden group">
+          <div className="aspect-[4/3] md:aspect-auto md:col-span-2 md:row-span-2 rounded-xl overflow-hidden group">
             <img src="/images/Photos/Three Students Photoshoot.jpg" alt="Members photoshoot" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
           </div>
-          <div className="col-span-1 row-span-1 rounded-xl overflow-hidden group">
+          <div className="aspect-[4/3] md:aspect-auto rounded-xl overflow-hidden group">
             <img src="/images/Photos/Students at Event.jpeg" alt="Members at event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
           </div>
-          <div className="col-span-1 row-span-1 rounded-xl overflow-hidden group">
+          <div className="aspect-[4/3] md:aspect-auto rounded-xl overflow-hidden group">
             <img src="/images/Photos/Lollapalooza2.jpg" alt="Members at Lollapalooza" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
           </div>
-          <div className="col-span-1 row-span-1 rounded-xl overflow-hidden group">
+          <div className="aspect-[4/3] md:aspect-auto rounded-xl overflow-hidden group">
             <img src="/images/Photos/Creator at woman empowerment event holding a book.jpeg" alt="Creator at event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
           </div>
-          <div className="col-span-1 row-span-1 rounded-xl overflow-hidden group">
+          <div className="aspect-[4/3] md:aspect-auto rounded-xl overflow-hidden group">
             <img src="/images/Photos/Two Creators.jpeg" alt="Two creators" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
           </div>
         </motion.div>

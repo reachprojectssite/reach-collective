@@ -44,7 +44,7 @@ const publications = [
 
 const FeaturedIn = () => {
   return (
-    <section className="bg-white border-b border-reach-border">
+    <section className="bg-white border-b border-reach-border overflow-hidden">
       <div className="container mx-auto px-6 py-6">
         <motion.div
           initial={{ opacity: 0, y: 12 }}
@@ -57,8 +57,8 @@ const FeaturedIn = () => {
             As featured in
           </span>
 
-          {/* Flex row: logos space evenly based on natural widths */}
-          <div className="flex flex-nowrap items-center justify-between gap-x-6 w-full max-w-6xl">
+          {/* Flex row: logos wrap on mobile, single row on md+ */}
+          <div className="flex flex-wrap md:flex-nowrap items-center justify-center md:justify-between gap-x-4 md:gap-x-6 gap-y-1 w-full max-w-6xl">
             {publications.map((pub) => (
               <a
                 key={pub.name}
@@ -66,7 +66,7 @@ const FeaturedIn = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={pub.name}
-                className="group flex items-center justify-center h-[100px] px-3"
+                className="group flex items-center justify-center h-[64px] md:h-[100px] px-2 md:px-3"
               >
                 <img
                   src={pub.logo}
@@ -77,7 +77,7 @@ const FeaturedIn = () => {
                     const fb = e.currentTarget.nextElementSibling as HTMLElement;
                     if (fb) fb.style.display = 'block';
                   }}
-                  className="w-auto max-w-[180px] object-contain grayscale opacity-40 group-hover:opacity-70 transition-opacity duration-200"
+                  className="w-auto max-w-[110px] md:max-w-[180px] max-h-[34px] md:max-h-none object-contain grayscale opacity-40 group-hover:opacity-70 transition-opacity duration-200"
                 />
                 <span className="hidden text-[10px] font-bold text-reach-ink/30 group-hover:text-reach-ink/60 transition-colors">
                   {pub.name}

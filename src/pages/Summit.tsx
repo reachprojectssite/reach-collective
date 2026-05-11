@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import {
   ArrowRight, Mic, Users, Lightbulb, Sparkles, Calendar, MapPin, Clock,
-  CheckCircle2, Tv, Brain, Trophy, Music, Building2, Rocket, Zap, Star, Bell,
+  CheckCircle2, Tv, Brain, Trophy, Music, Building2, Rocket, Zap, Star, Bell, ChevronRight,
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import AnimatedCounter from "../components/AnimatedCounter";
@@ -296,8 +296,8 @@ const Summit = () => {
           SUMMIT SECTION NAV — sits below main navbar, above hero
       ════════════════════════════════════════ */}
       <nav className="sticky top-16 z-30 bg-white/90 backdrop-blur-md border-b border-reach-border">
-        <div className="container mx-auto px-6">
-          <div className="flex items-center justify-center gap-8 md:gap-14 py-4 overflow-x-auto">
+        <div className="container mx-auto px-6 relative">
+          <div className="flex items-center justify-start md:justify-center gap-8 md:gap-14 py-4 overflow-x-auto [&::-webkit-scrollbar]:hidden [scrollbar-width:none]">
             {[
               { label: "Get Involved", href: "#interest" },
               { label: "Agenda",       href: "#agenda" },
@@ -314,6 +314,16 @@ const Summit = () => {
                 {item.label}
               </a>
             ))}
+          </div>
+          {/* Mobile-only scroll affordance: gradient fade + pulsing chevron on right edge */}
+          <div className="md:hidden pointer-events-none absolute right-0 top-0 bottom-0 w-14 bg-gradient-to-l from-white via-white/85 to-transparent flex items-center justify-end pr-3">
+            <motion.span
+              animate={{ x: [0, 4, 0] }}
+              transition={{ duration: 1.4, repeat: Infinity, ease: "easeInOut" }}
+              className="inline-flex"
+            >
+              <ChevronRight className="w-4 h-4 text-reach-navy/60" />
+            </motion.span>
           </div>
         </div>
       </nav>
@@ -1103,21 +1113,21 @@ const Summit = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="grid grid-cols-2 md:grid-cols-4 grid-rows-2 gap-3 md:gap-4 h-[400px] md:h-[500px]"
+            className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-3 md:gap-4 md:h-[500px]"
           >
-            <div className="col-span-2 row-span-2 rounded-xl overflow-hidden group">
+            <div className="aspect-[4/3] md:aspect-auto md:col-span-2 md:row-span-2 rounded-xl overflow-hidden group">
               <img src="/images/Summit/24a1ea0a-5c36-4b54-b2b0-9b54e04028e5.jpeg" alt="REACH event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
             </div>
-            <div className="col-span-1 row-span-1 rounded-xl overflow-hidden group">
+            <div className="aspect-[4/3] md:aspect-auto rounded-xl overflow-hidden group">
               <img src="/images/Summit/original%20(4).jpeg" alt="REACH event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
             </div>
-            <div className="col-span-1 row-span-1 rounded-xl overflow-hidden group">
+            <div className="aspect-[4/3] md:aspect-auto rounded-xl overflow-hidden group">
               <img src="/images/Summit/4ce0c3c4-4903-4b55-b6cc-070344dfcf1b.jpg" alt="REACH event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
             </div>
-            <div className="col-span-1 row-span-1 rounded-xl overflow-hidden group">
+            <div className="aspect-[4/3] md:aspect-auto rounded-xl overflow-hidden group">
               <img src="/images/Summit/5c62a245-e947-4191-ad85-c8e832ce609d.jpg" alt="REACH event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
             </div>
-            <div className="col-span-1 row-span-1 rounded-xl overflow-hidden group">
+            <div className="aspect-[4/3] md:aspect-auto rounded-xl overflow-hidden group">
               <img src="/images/Summit/original%20(5).jpeg" alt="REACH event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
             </div>
           </motion.div>
