@@ -1,95 +1,111 @@
 import { motion } from 'framer-motion';
-import { Quote } from 'lucide-react';
 
 const testimonials = [
   {
-    quote: "Founding and leading a chapter of REACH has been monumental for my growth as a leader. It has prepared me to build systems and delegate... a great skill that will help me within my own social media business career!",
-    name: "Justin Leusner",
-    title: "Chapter Founder, Penn State University"
+    quote:
+      "Founding a REACH chapter changed how I think about leadership entirely. I went from posting content alone to running a team, building systems, and learning how to mobilize people. That skill will follow me into every career I have.",
+    name: 'Justin Leusner',
+    handle: '@justinleusner',
+    role: 'Chapter Founder · Penn State University',
+    photo: '/images/testimonials/Justin Leusner.jpg',
   },
   {
-    quote: "REACH gave me the platform and support to take my passion seriously. Through hosting events, managing a team, and connecting with other creatives, I've grown more than I ever expected.",
-    name: "Nila Makhfi",
-    title: "USC Chapter President"
+    quote:
+      "REACH gave me the platform and structure to take my passion seriously. Through hosting events, running a team, and connecting with creators across schools, I grew more in one semester than I had in years of posting on my own.",
+    name: 'Nila Makhfi',
+    handle: '@nilamakhfi',
+    role: 'Chapter Founder · University of California, Los Angeles',
+    photo: '/images/testimonials/Nila Makhfi.png',
   },
   {
-    quote: "REACH helped me realize that content creation can be a real career path. Through the workshops and campaigns, I've learned how to pitch myself, work with brands, and grow my platform in a smart way.",
-    name: "Jayme Aiden",
-    title: "Alum, UCLA"
-  }
+    quote:
+      "I didn't know content creation could be a real career until REACH. The workshops, brand deal education, learning how to pitch myself, it all made me realize I was already doing the work. I just needed the language for it.",
+    name: 'Jayme Aiden',
+    handle: '@jayme.aiden',
+    role: 'Alum · University of California, Los Angeles',
+    photo: '/images/testimonials/Jayme Aiden.jpg',
+  },
 ];
+
+const container = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1, transition: { staggerChildren: 0.12 } },
+};
+
+const card = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } },
+};
 
 const Testimonials = () => {
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute -left-1/4 -top-1/4 w-1/2 h-1/2 bg-reach-cream rounded-full opacity-20 blur-3xl" />
-        <div className="absolute -right-1/4 -bottom-1/4 w-1/2 h-1/2 bg-reach-gold/20 rounded-full opacity-20 blur-3xl" />
-      </div>
-
-      <div className="container mx-auto px-4">
-        {/* Section Header */}
+    <section className="bg-white py-14 md:py-24 border-t border-reach-border">
+      <div className="container mx-auto px-6">
+        {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-20"
+          transition={{ duration: 0.6 }}
+          className="text-center mb-14"
         >
-          <h2 className="text-sm font-semibold text-reach-gold uppercase tracking-wider mb-3">
-            Testimonials
+          <span className="text-xs font-bold uppercase tracking-[0.2em] text-reach-goldDark mb-4 block">
+            From the Community
+          </span>
+          <h2 className="font-grotesk text-3xl md:text-4xl lg:text-5xl font-bold text-reach-ink">
+            Don't take our word for it.
           </h2>
-          <h3 className="font-display text-4xl md:text-5xl font-bold text-reach-navy mb-6">
-            Hear From Our Community
-          </h3>
-          <p className="text-xl text-reach-slate max-w-3xl mx-auto">
-            Our members are building the future of digital influence while developing lifelong skills and connections.
-          </p>
         </motion.div>
 
-        {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {testimonials.map((testimonial, index) => (
+        {/* Cards */}
+        <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-6"
+        >
+          {testimonials.map((t, i) => (
             <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              className="bg-white p-8 rounded-none border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 group"
+              key={i}
+              variants={card}
+              whileHover={{
+                y: -8,
+                rotate: i === 1 ? 0 : i === 0 ? -1 : 1,
+                scale: 1.02,
+                boxShadow: '0 24px 48px -12px rgba(0,0,0,0.14)',
+              }}
+              transition={{ type: 'spring', stiffness: 350, damping: 22 }}
+              className="group bg-reach-offwhite border border-reach-border rounded-2xl p-7 cursor-default"
             >
-              {/* Hover Effect Border */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-reach-navy to-reach-gold transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
-                <div className="absolute top-0 right-0 w-1 h-full bg-gradient-to-b from-reach-gold to-reach-gold transform origin-top scale-y-0 group-hover:scale-y-100 transition-transform duration-500" />
-                <div className="absolute bottom-0 right-0 w-full h-1 bg-gradient-to-l from-reach-navy to-reach-gold transform origin-right scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
-                <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-reach-gold to-reach-gold transform origin-bottom scale-y-0 group-hover:scale-y-100 transition-transform duration-500" />
+              {/* Top row */}
+              <div className="flex items-start justify-between mb-6">
+                <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-white shadow-sm flex-shrink-0">
+                  <img src={t.photo} alt={t.name} className="w-full h-full object-cover" />
+                </div>
+                {/* Quote mark */}
+                <svg width="24" height="18" viewBox="0 0 24 18" fill="none" className="text-reach-gold/40 group-hover:text-reach-gold/70 transition-colors">
+                  <path d="M0 18V10.8C0 7.6.733 4.933 2.2 2.8 3.667.667 5.867 0 8.8 0L10 2.2C8.267 2.6 6.933 3.4 6 4.6 5.067 5.8 4.6 7.2 4.6 8.8H8V18H0Zm14 0V10.8c0-3.2.733-5.867 2.2-8C17.667.667 19.867 0 22.8 0L24 2.2c-1.733.4-3.067 1.2-4 2.4-.933 1.2-1.4 2.6-1.4 4.2H22V18H14Z" fill="currentColor" />
+                </svg>
               </div>
 
-              {/* Quote Icon */}
-              <Quote className="h-8 w-8 text-reach-gold mb-6" />
-
               {/* Quote */}
-              <blockquote className="text-lg text-reach-navy mb-6">
-                {testimonial.quote}
+              <blockquote className="text-reach-ink/65 text-sm leading-relaxed mb-7">
+                "{t.quote}"
               </blockquote>
 
               {/* Author */}
-              <div>
-                <cite className="not-italic font-semibold text-reach-navy block">
-                  {testimonial.name}
-                </cite>
-                <span className="text-reach-slate text-sm">
-                  {testimonial.title}
-                </span>
+              <div className="border-t border-reach-border pt-5">
+                <p className="font-grotesk font-bold text-reach-ink text-sm">{t.name}</p>
+                <p className="text-reach-goldDark text-xs mt-0.5 font-mono">{t.handle}</p>
+                <p className="text-reach-ink/35 text-xs mt-1">{t.role}</p>
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
 };
 
-export default Testimonials; 
+export default Testimonials;

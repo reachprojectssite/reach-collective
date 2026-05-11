@@ -23,9 +23,16 @@ export default {
 				reach: {
 					navy: '#1E3D6B',
 					gold: '#C5A572',
+					goldDark: '#8A6820',
 					crimson: '#9E1B32',
 					slate: '#556B87',
 					cream: '#F5F1E8',
+					offwhite: '#F8F7F2',
+					ink: '#111111',
+					border: '#E8E5DF',
+					dark: '#0A0A0B',
+					electric: '#8B5CF6',
+					neon: '#22C55E',
 				},
 				// UI colors
 				border: 'hsl(var(--border))',
@@ -94,6 +101,14 @@ export default {
 						height: '0'
 					}
 				},
+				'marquee': {
+					'0%': { transform: 'translateX(0%)' },
+					'100%': { transform: 'translateX(-50%)' }
+				},
+				'marquee-reverse': {
+					'0%': { transform: 'translateX(-50%)' },
+					'100%': { transform: 'translateX(0%)' }
+				},
 				'fade-in': {
 					'0%': { opacity: '0' },
 					'100%': { opacity: '1' }
@@ -121,12 +136,15 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.5s ease-out forwards',
 				'slide-up': 'slide-up 0.5s ease-out forwards',
-				'counter': 'counter 2s ease-out forwards'
+				'counter': 'counter 2s ease-out forwards',
+				'marquee': 'marquee 35s linear infinite',
+				'marquee-reverse': 'marquee-reverse 35s linear infinite',
 			},
 			fontFamily: {
 				'sans': ['Inter', 'sans-serif'],
 				'serif': ['Playfair Display', 'serif'],
-				'display': ['Cinzel', 'serif']
+				'display': ['Cinzel', 'serif'],
+				'grotesk': ['Space Grotesk', 'sans-serif'],
 			}
 		}
 	},
