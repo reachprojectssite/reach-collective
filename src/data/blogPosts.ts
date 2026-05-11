@@ -296,6 +296,7 @@ The creators who get hired by the same brands again and again are not the ones w
   },
   {
     slug: 'how-to-land-your-first-brand-deal-as-a-college-creator',
+    title: 'How to land your first brand deal as a college creator',
     description:
       'A practical playbook for college creators landing their first paid brand partnership. What to pitch, who to pitch, and how to price your first deal.',
     excerpt:
