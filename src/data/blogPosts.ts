@@ -74,8 +74,228 @@ The Summit is REACH's attempt to bring those threads into one room. More details
 See you in Los Angeles.`,
   },
   {
+    slug: 'how-to-file-taxes-as-a-college-creator',
+    title: 'How to file taxes as a college creator',
+    description:
+      'A practical guide to filing taxes as a college creator. What is taxable, what is deductible, how to handle 1099s, when to pay quarterly, and when to hire help.',
+    excerpt:
+      'Brand deals, AdSense, sponsorships, UGC work. The IRS treats all of it as self-employment income, and most college creators are caught off-guard their first April. Here is what to actually do.',
+    publishedDate: '2026-05-10',
+    author: AUTHOR,
+    category: 'Business',
+    tags: ['taxes', 'business', 'self-employment', '1099', 'college creators'],
+    readingMinutes: 9,
+    body: `# How to file taxes as a college creator
+
+Brand deals, AdSense, sponsorships, UGC work. The IRS treats all of it as self-employment income, and most college creators are caught off-guard their first April. This is the practical version of what to do.
+
+**A note before we start.** This is general educational information, not tax advice. Tax law varies by state, situation, and year. If you have any uncertainty, hire a CPA who works with self-employed clients. The cost of a good CPA, often a few hundred dollars, is almost always less than the cost of getting taxes wrong.
+
+## What counts as income
+
+Pretty much everything you earn from creating content is taxable. The most common sources for college creators:
+
+- **Brand deals and sponsorships.** Cash paid by a brand for a post is taxable, full stop.
+- **Gifted product.** Yes, this counts. If a brand sends you a product valued over a nominal amount in exchange for a post, the fair market value of that product is taxable income. Most creators do not report this. The IRS technically requires it.
+- **Platform monetization.** YouTube AdSense, TikTok Creativity Program, Twitch payouts, Meta bonuses. All taxable.
+- **Affiliate income.** Amazon Associates, LTK, ShopMy, any other affiliate program.
+- **UGC work paid by brands.** Even if the content was for the brand's own channels, the payment is taxable income.
+- **Patreon, Substack, course sales, merch.** All taxable.
+
+If you received $600 or more from a single payer during the year, that payer is required to issue you a **1099-NEC** (or 1099-K from a payment platform). Even if no 1099 is issued, the income is still taxable. The 1099 is not what triggers the tax. The income is what triggers the tax.
+
+## What you can actually deduct
+
+This is where most creators leave money on the table. As a self-employed creator, you can deduct ordinary and necessary business expenses. For a creator, that usually includes:
+
+- **Production gear.** Cameras, microphones, lights, tripods, SD cards, hard drives.
+- **Software and subscriptions.** CapCut Pro, Adobe Creative Cloud, Frame.io, hosting, email tools, scheduling tools, stock music or footage.
+- **Phone and internet.** A reasonable percentage based on how much you use them for content work. If your phone is 70 percent business, you can deduct 70 percent of the bill.
+- **Home office.** If you have a dedicated space in your dorm or apartment used regularly and exclusively for content work, a portion of rent and utilities can be deducted (square-footage based). The "regular and exclusive" rule is strict. A corner of your bedroom does not qualify.
+- **Travel and mileage.** Driving to a shoot location, traveling to a brand event, mileage to meet a collaborator. Track miles or actual expenses.
+- **Education.** Online courses, books, conference tickets directly related to creator skills.
+- **Contractor payments.** If you paid an editor, designer, or assistant, those payments are deductible. You may need to issue them a 1099 if you paid them $600 or more.
+- **Bank and platform fees.** PayPal fees, Stripe fees, business banking fees.
+- **Professional services.** Your CPA fee. Your lawyer's fee for contract review. Both deductible.
+
+Keep receipts. The standard is "documentary evidence sufficient to prove the deduction." Bank statements alone are usually not enough. Save PDFs of invoices, emails, and receipts. A simple Google Drive folder named with the tax year is enough.
+
+## Self-employment tax
+
+This is the part that surprises most first-time filers. As a self-employed creator, you owe two layers of tax:
+
+- **Income tax** at your normal federal and state brackets.
+- **Self-employment tax** of 15.3 percent, which covers Social Security and Medicare. (For a W-2 employee, the employer pays half. You are both the employee and the employer.)
+
+A rough rule of thumb: set aside 25 to 30 percent of every creator dollar in a separate savings account for taxes. If you earn 10,000 dollars from brand deals, put 2,500 to 3,000 dollars aside immediately. You will be much happier in April.
+
+## Quarterly estimated taxes
+
+If you expect to owe more than 1,000 dollars in taxes for the year, the IRS expects you to pay throughout the year, not just in April. These are called **quarterly estimated payments**, and they are due roughly:
+
+- April 15 (for income earned January through March)
+- June 15 (April through May)
+- September 15 (June through August)
+- January 15 of the following year (September through December)
+
+If you skip these and pay everything in April, the IRS charges underpayment penalties. Not enormous, but unnecessary.
+
+You can pay quarterlies online at IRS Direct Pay. Your state may have its own quarterly system.
+
+## The 1099 you are about to receive
+
+Brands and platforms that paid you 600 dollars or more in a year are required to send you a 1099 by January 31. Most arrive electronically. Check spam.
+
+Three flavors you might see:
+
+- **1099-NEC.** Most common. Sent by brands that paid you directly for sponsored content or services.
+- **1099-K.** Sent by payment platforms like Stripe, PayPal, Venmo (for business accounts) if your total exceeds the platform's reporting threshold. The threshold dropped significantly in recent years, so expect more 1099-Ks than your friends got two years ago.
+- **1099-MISC.** Rarer for creators, but sometimes used for non-employee compensation or prizes.
+
+The dollar amounts on every 1099 are reported to the IRS automatically. If you do not include them on your return, the IRS knows and will eventually ask why. Always report what is on the form, even if you think it is wrong.
+
+If a 1099 is wrong, contact the issuer immediately to get a corrected version.
+
+## Does forming an LLC help
+
+For most college creators in their first year or two, an LLC does not change much from a tax perspective. A single-member LLC is taxed as a sole proprietorship by default. The income flows through to your personal return. You pay the same self-employment tax.
+
+An LLC does provide **liability protection**, which can matter if you sign brand contracts or do client work. But it does not magically lower your taxes.
+
+The bigger tax move, available to LLCs and sole proprietors, is electing **S-Corp status** once your net income reaches roughly 60,000 to 80,000 dollars a year. At that point, an S-Corp election can save you on self-employment tax. Below that threshold, the added administrative cost (payroll, separate tax return, more bookkeeping) usually outweighs the savings.
+
+If you cross into "this is a real business" territory, a CPA can run the math for you. Until then, stay simple.
+
+## Tools you actually need
+
+You do not need expensive software in your first year. The minimum that works:
+
+1. **A separate checking account** for creator income and expenses. Even if it is a personal account, just one you use exclusively for creator money. This makes everything easier.
+2. **A simple bookkeeping spreadsheet or app.** Wave (free) or QuickBooks Self-Employed handle most college-creator needs.
+3. **Tax software** like TurboTax Self-Employed or FreeTaxUSA. Or a CPA if your situation has any complexity (multiple states, large gifted product income, contractor payments out, etc.).
+4. **A receipt folder** in Google Drive or a tool like Expensify if you want it automated.
+
+## Three things to do today
+
+If you are reading this in May and want to make next April easier:
+
+1. **Open a separate checking account** for creator income, today.
+2. **Start a Google Sheet** with columns for date, source, amount, and category. Backfill what you can remember from this year.
+3. **Move 25 to 30 percent of every incoming creator payment** to a savings account labeled "Taxes." Do not touch it.
+
+The creators who handle this well are not the ones who hire the most expensive CPA. They are the ones who built two habits in their first year. Separate the money. Track the income.
+
+Everything else compounds from there.`,
+  },
+  {
+    slug: 'how-brands-actually-evaluate-creators-the-buying-side',
+    title: 'How brands actually evaluate creators (the buying side)',
+    description:
+      'A look inside how brand marketers actually pick which creators to work with. What gets you shortlisted, what gets you rejected, and how decisions get made.',
+    excerpt:
+      'Almost nobody writes about the brand side of a creator decision. Here is what the marketers on the other side of your pitch are actually looking at, in roughly the order they look at it.',
+    publishedDate: '2026-05-10',
+    author: AUTHOR,
+    category: 'Brand Deals',
+    tags: ['brand deals', 'creator economy', 'marketing', 'evaluation', 'sponsorships'],
+    readingMinutes: 9,
+    body: `# How brands actually evaluate creators (the buying side)
+
+Almost nobody writes about the brand side of a creator decision. Most creator advice is written from the creator's perspective, which leaves a giant blind spot: the people deciding whether to pay you are operating from a completely different set of inputs.
+
+This is what marketers on the other side of your pitch are actually looking at, in roughly the order they look at it. Internalize this list, and your pitch decks, rates, and follow-ups improve in ways no audience-growth tactic can match.
+
+## Step 1: Does this creator fit the brief?
+
+Before anything else, a brand marketer is filtering by **fit**. They have a campaign brief, a target audience, and a category or aesthetic in mind. If your content has nothing to do with the campaign's product or audience, you are eliminated at the first filter regardless of how big your following is.
+
+Fit is usually broken into three parts:
+
+- **Audience demographic fit.** Age, gender, geography, income bracket. Is your audience the audience the brand wants to reach?
+- **Content category fit.** Beauty brand looking at beauty creators. Tech brand looking at tech reviewers. Lifestyle is the broadest, hardest category to filter.
+- **Aesthetic fit.** Does your content look like it belongs near the brand's other marketing? Brands care about this more than creators realize. A premium skincare brand does not want their product next to chaotic gym selfie content, even if the creator has a beauty-adjacent audience.
+
+If your one-pager does not make fit obvious in the first ten seconds, you are not getting through this filter.
+
+## Step 2: Is the audience real?
+
+Once a creator clears fit, the brand starts looking for red flags around audience quality. This step is usually quick and brutal.
+
+What they look for:
+
+- **Follower-to-engagement ratio.** A 100,000-follower account with 50 likes per post is a flag. They are not assuming you bought followers. They are assuming the audience is not engaged enough to convert.
+- **Comment quality.** Five-word generic comments ("love this!" "queen!") in volume look like comment-pod activity. Specific, personal, contextual comments look like a real community.
+- **Geographic distribution.** If a brand is selling to the US market and 70 percent of your audience is overseas, you are out. This is not personal.
+- **Audience age band.** If your content is gambling or alcohol-adjacent and a meaningful portion of your audience is under 21, that is a regulatory non-starter for the brand.
+
+Tools like Modash, Klear, CreatorIQ, and Tagger let marketers see this data directly. Even if you do not share it, they can see it. Assume they will.
+
+## Step 3: Have they worked with brands before?
+
+The third filter is "is this creator easy to work with." This is where the cold pitch wins or loses.
+
+Brands look for:
+
+- **Past brand work.** If you have visibly run sponsored posts before, you understand the process. You know about #ad. You know about deliverable timing. You are a lower-risk hire.
+- **The quality of your sponsored content.** Bad sponsored content is sponsored content that performs worse than your organic. Good sponsored content is sponsored content that performs at or near your organic baseline. Brands look at your past sponsored posts and judge.
+- **Tagging hygiene.** Did you actually tag the brand correctly? Use the right hashtags? Disclose properly? These small things signal professionalism.
+- **Response time.** This one is invisible to most creators because it shows up in private communication. The creators who respond to outreach within 24 hours close more deals. Marketers track this in their own notes.
+
+If you have never run a sponsored post, you can substitute "a portfolio of strong organic work" plus "a clear, structured one-pager." Both signal you are not going to be a chaotic partner.
+
+## Step 4: Will it perform?
+
+This is where the actual math happens. Brands run a rough internal calculation on every shortlisted creator. The calculation varies by campaign goal:
+
+**For awareness campaigns**, the math is typically Cost Per Thousand impressions (CPM):
+
+CPM = (your rate / your expected views) x 1,000
+
+A brand benchmarks your CPM against paid social ads, other creators they have used, and the rest of their shortlist. If your CPM is wildly higher than the competition, you are out unless something else (aesthetic fit, exclusive access, audience quality) justifies the premium.
+
+**For consideration campaigns**, they look at Cost Per Engagement (CPE) and the depth of engagement. A 500-comment thread on your post is worth more than a 5,000-like post with no comments.
+
+**For performance campaigns** (where they want measurable conversions), the calculation is Cost Per Acquisition (CPA) or Return on Ad Spend (ROAS). They will give you a tracking link or promo code and judge you on how many people actually buy. This is the most ruthless filter. Creators who have proven they can drive sales get the best deals and the most repeat work.
+
+Knowing which type of campaign a brand is running tells you what to emphasize in your pitch. Awareness brands want reach. Performance brands want conversion stories.
+
+## Step 5: Will leadership approve this creator?
+
+The marketer running the campaign is rarely the final decision-maker. Most brand deals over a few thousand dollars go through some kind of internal approval. The questions that get asked in that approval meeting:
+
+- "Is this creator on-brand?" Translation: would the CEO be embarrassed to see our logo next to their content?
+- "Have they ever said anything that would create a problem for us?" Translation: someone Googled you. Old tweets, controversial takes, beefs with other creators. The brand looked.
+- "Is there any FTC or legal risk?" Translation: have you been involved in any sponsored-content controversy, undisclosed promotion, or misleading claims?
+- "Will this creator make the brand look good in 18 months?" Brands care about staying-power. A creator on a trajectory looks like a better investment than a creator whose engagement is fading.
+
+This is the filter most creators have no visibility into and the one most often responsible for "we decided to go in a different direction" emails. The brand liked you. Someone above the brand did not.
+
+## What gets you put on the shortlist for future campaigns
+
+The list above is what happens when a brand evaluates a creator they do not know yet. The bigger long-term opportunity is being already-known to a brand or agency when their next campaign starts.
+
+A few things put creators on internal "favorites" lists:
+
+- **You hit your last deadline.** Not by a lot. On time.
+- **You sent a recap.** A short post-campaign email with screenshots and key metrics costs you 20 minutes and changes how marketers remember you.
+- **You were easy on revisions.** Two rounds, you took the notes, you did not argue.
+- **You over-delivered without making it weird.** A second piece of content you were not contracted for. A bonus story frame. A repost a week later. Small.
+- **You followed up six weeks later.** "Anything coming up I should know about?" Most creators never do this. Marketers remember the ones who do.
+
+Internal "creators we like" spreadsheets are a real artifact at most brands and agencies. Get on one. Stay on one. Most of your future deal flow will come from those lists, not from cold outreach.
+
+## What you can do with this list
+
+If you are a creator reading this, do three things:
+
+1. **Audit your own audience data.** Pull engagement rate, geographic distribution, and demographic split. If any of those would disqualify you on Step 2, address them before pitching brands.
+2. **Look at your one-pager through the filter above.** Does it answer fit, audience reality, and past work in the first ten seconds? If not, rewrite it.
+3. **Treat every brand deal as the audition for the next deal.** Hit the deadline. Send the recap. Follow up. The math compounds faster than chasing new outreach.
+
+The creators who get hired by the same brands again and again are not the ones with the biggest audiences. They are the ones who made the marketer's job easier the first time.`,
+  },
+  {
     slug: 'how-to-land-your-first-brand-deal-as-a-college-creator',
-    title: 'How to land your first brand deal as a college creator',
     description:
       'A practical playbook for college creators landing their first paid brand partnership. What to pitch, who to pitch, and how to price your first deal.',
     excerpt:
