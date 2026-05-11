@@ -64,9 +64,14 @@ const Navbar = () => {
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="md:hidden p-2 text-reach-ink/60 hover:text-reach-ink"
-              aria-label="Toggle menu"
+              aria-label={isOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={isOpen}
             >
-              {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              {isOpen ? (
+                <X className="h-5 w-5" aria-hidden="true" />
+              ) : (
+                <Menu className="h-5 w-5" aria-hidden="true" />
+              )}
             </button>
           </div>
         </div>

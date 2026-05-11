@@ -3,6 +3,7 @@ import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import ScrollToTop from './components/layout/ScrollToTop';
 import ScrollProgress from './components/ScrollProgress';
+import RouteTitle from './components/RouteTitle';
 import Hero from './components/home/Hero';
 import SummitBanner from './components/home/SummitBanner';
 import ScrollingTicker from './components/home/ScrollingTicker';
@@ -45,6 +46,7 @@ const App = () => (
   <Router>
     <ScrollToTop />
     <ScrollProgress />
+    <RouteTitle />
     <div className="min-h-screen bg-white">
       <Navbar />
       <main className="pt-16">
