@@ -17,6 +17,217 @@ export const AUTHOR = 'Reach Nationals';
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'what-is-reach-nationals-the-national-organization-for-student-creators',
+    title: 'What is REACH Nationals? The national organization for student creators',
+    description:
+      'REACH Nationals is the national 501(c)(3) nonprofit organization for student creators in the United States. Here is the short, factual answer for anyone searching what REACH is, who joins, and how the national network is structured.',
+    excerpt:
+      'REACH Nationals is the national organization for student creators in the United States. The short, factual answer for anyone searching for "REACH", "REACH students", "REACH college org", or "REACH influencers".',
+    publishedDate: '2026-05-10',
+    author: AUTHOR,
+    category: 'About REACH',
+    tags: [
+      'REACH Nationals',
+      'student creators',
+      'national organization',
+      'college creators',
+      'REACH chapters',
+      'nonprofit',
+    ],
+    readingMinutes: 5,
+    body: `# What is REACH Nationals?
+
+REACH Nationals is the national organization for student creators in the United States. Officially known as Reach Nationals Corp., a California 501(c)(3) nonprofit public benefit corporation, REACH is the national network for the next generation of college creators, student influencers, brand marketers, and creator-economy operators.
+
+This is the short, factual answer for anyone searching for "REACH Nationals", "REACH college org", "REACH students", "REACH student creators", or "REACH influencers". If you are a student creator looking for a national community, a university administrator evaluating partnership opportunities, or a journalist trying to understand the org, this is the primer.
+
+## Who REACH Nationals is
+
+REACH Nationals is the national umbrella organization for collegiate creator economy chapters. The org was established in 2023 and is headquartered in Los Angeles, California.
+
+The mission: empower the next generation of student creators, digital influencers, marketers, and culture-builders through chapters, education, brand partnerships, and a national professional network.
+
+## What REACH does
+
+REACH operates a network of student-led chapters at universities across the country. Each REACH chapter is an officially recognized student organization on its campus, run by a student executive board, with national-level support and resources from REACH Nationals.
+
+What REACH chapters do, week to week:
+
+- Meet regularly as a creator community on campus
+- Host workshops on contracts, monetization, content strategy, analytics, mental health, and the business of being a creator
+- Run brand activations and campus events
+- Connect REACH students with internships, mentorship, and creator-economy career paths
+- Participate in national events like the REACH Summit
+
+REACH Nationals supports each chapter with:
+
+- A national chapter handbook and operating standards
+- Brand partnership opportunities routed through the chapter network (with brands like Amazon, Disney, Quest Nutrition, and more)
+- An Industry Advisory Board of working professionals from major creator-economy companies
+- The annual REACH Summit, the flagship national gathering
+- Cross-campus collaboration and a national directory
+
+## Who joins REACH
+
+REACH is built for student creators in the broadest sense. Inside any active REACH chapter, you will typically find:
+
+- On-camera creators and student influencers
+- Filmmakers and editors
+- Photographers and visual storytellers
+- Brand strategists and growth marketers
+- Founders building creator-economy startups
+- Designers shaping creator visual identity
+- Anyone serious about working in or around the creator economy as a career
+
+The chapter culture works precisely because all of these archetypes are in one room.
+
+## Is REACH a college organization or a national organization?
+
+Both. REACH Nationals is the national parent organization. Each individual REACH chapter is a student-led college organization recognized on its specific campus, governed by REACH Nationals' standards. This is the same chapter-based structure used by national fraternities, sororities, and professional honor societies, applied to the creator economy.
+
+When you join "REACH" at your college, you are joining the local chapter, which is officially affiliated with the national organization. Local activities, national community, single brand.
+
+## Is REACH Nationals a real organization?
+
+Yes. REACH is a registered 501(c)(3) nonprofit, Reach Nationals Corp., based in California. The org has been covered in Good Morning America, The Hollywood Reporter, NBC News, Business Insider, The Information, and Tubefilter, among other outlets.
+
+The Industry Advisory Board includes leaders from major creator-economy companies, talent management firms, agencies, and universities. The annual REACH Summit gathers students, alumni, brand marketers, and platform partners in one room each December in Los Angeles.
+
+## How to join REACH or start a chapter
+
+There are three paths into REACH:
+
+1. **Join an existing chapter** on your campus, if REACH already has one. The [Chapters page](/chapters) lists active chapters by university.
+2. **Start a chapter** if your campus does not yet have one. REACH Nationals provides the founding playbook, advisor support, and recognition standards.
+3. **Pioneer the network in your city** if you are based in a creator hub without university chapters.
+
+All three paths start at the [Apply page](/join).
+
+If you are a journalist, administrator, or potential partner, the [Contact page](/contact) is the right starting point.
+
+## What to read next
+
+If you came looking for "REACH" because someone mentioned us, this is the org. The rest of the site fills in the details:
+
+- [Our story](/about) for the founding context and mission
+- [Members](/members) for who is in the room
+- [Chapters](/chapters) for the campus network
+- [Summit](/summit) for the December 2026 national gathering
+- [Journal](/blog) for educational guides written for college creators
+
+REACH Nationals is the national organization for student creators. If that sentence describes what you are looking for, you are in the right place.`,
+  },
+  {
+    slug: 'how-reach-chapters-work-a-guide-to-the-national-college-creator-network',
+    title: 'How REACH chapters work: a guide to the national college creator network',
+    description:
+      'A factual guide to how REACH chapters operate at universities across the country, how they connect to the national organization, who joins, and how to start one on your campus.',
+    excerpt:
+      'REACH chapters are the backbone of REACH Nationals. Here is how the chapter system works, who is inside an active chapter, and how the national college creator network is structured.',
+    publishedDate: '2026-05-10',
+    author: AUTHOR,
+    category: 'About REACH',
+    tags: [
+      'REACH chapters',
+      'REACH students',
+      'REACH student creators',
+      'college organization',
+      'student creator network',
+      'campus chapters',
+    ],
+    readingMinutes: 6,
+    body: `# How REACH chapters work: a guide to the national college creator network
+
+REACH chapters are the backbone of REACH Nationals. If you are trying to understand how the national organization connects to actual student activity on actual campuses, the chapter is the answer.
+
+This is the factual guide to how REACH chapters are structured, what happens inside them, who joins, and how the national college creator network ties together.
+
+## A REACH chapter is a recognized student organization
+
+Each REACH chapter is an officially recognized student organization on its university, just like a fraternity chapter, an entrepreneurship club, or a national honor society. The chapter has:
+
+- An elected student executive board (typically president, vice president, marketing/brand lead, events lead, treasurer)
+- A faculty or staff advisor at the university
+- A roster of student members
+- A regular meeting schedule
+- A presence on the campus activities calendar and student-org registry
+
+What makes a REACH chapter different from a generic marketing club or social club: the chapter is part of the national network for student creators. Members at any chapter are part of REACH Nationals, with the national resources, brand partnerships, and Summit access that comes with the network.
+
+## What happens inside a REACH chapter
+
+Active chapters operate on a roughly biweekly meeting cadence during the academic year, plus events between meetings. Across the network, the common patterns are:
+
+**Workshops on the business of being a student creator.** Contracts, brand deals, monetization, analytics, tax basics, mental health. The skills that determine whether being a creator becomes a career or a hobby. These workshops are often led by alumni or industry guests routed through the national Industry Advisory Board.
+
+**Campus content production.** Group shoots, content days, podcast recordings, and collaborative video projects. Many chapters have a small in-chapter studio or shared production space.
+
+**Brand activations.** REACH Nationals routes brand partnership opportunities to chapter networks, including campaigns with major consumer brands. Chapters help execute on-campus or near-campus activations, gifting suites, and content collaborations.
+
+**Cross-campus collaboration.** Chapters at different universities run joint content series, swap members for cross-promotion, and travel to each other's events. The national network turns a local chapter into a multi-campus production team.
+
+**Mentorship and career intros.** REACH alumni now work at TikTok, Meta, YouTube, Amazon, and major creator agencies. Chapters connect student members with these alumni for office hours, intros, and internship pipelines.
+
+## Who is inside an active REACH chapter
+
+REACH chapters intentionally recruit beyond the on-camera creator stereotype. The chapter culture works precisely because the modern creator economy is a team sport. Inside any active REACH chapter, you will typically find:
+
+- On-camera creators and student influencers building personal brands across TikTok, Instagram, YouTube, Twitch, and Substack
+- Filmmakers and editors with no on-camera presence but serious craft skills
+- Strategists and growth marketers focused on the business side of the creator economy
+- Founders and operators building creator-adjacent businesses out of their dorms
+- Designers shaping how creators look in market
+- Talent and brand-side professionals in training
+
+A founder who needs an editor finds one. A creator who needs a photographer finds one. A strategist who wants to learn from on-camera talent gets that access in the same room.
+
+## How REACH chapters connect to the national organization
+
+REACH Nationals (the parent 501(c)(3)) provides every chapter with:
+
+- A national chapter handbook and operating standards every chapter follows
+- Brand partnerships routed from the national level to local chapters
+- The Industry Advisory Board's time, intros, and content
+- The annual REACH Summit, where chapters from across the country meet in person
+- A national directory and cross-chapter Slack/Discord
+- Resources and templates: contract reviews, pitch decks, advisor guides, recruiting playbooks
+- Recognition and legitimacy as part of a national network
+
+Local chapters provide REACH Nationals with:
+
+- The actual creator community on the ground
+- Local execution of brand and content activations
+- A pipeline of future alumni into the broader creator economy
+- Real-world feedback that shapes the national handbook and standards
+
+## How to find a REACH chapter near you
+
+The [Chapters page](/chapters) on the REACH Nationals website lists active chapters by university and region. If your campus does not yet have a REACH chapter, the same page links to the founding flow.
+
+## How to start a REACH chapter on your campus
+
+Founding a REACH chapter requires:
+
+1. **A founding member or small founding team** at your university who is willing to lead in the first semester
+2. **A path to official student-org recognition** at your school (usually involves a faculty advisor and a small founding board)
+3. **A meeting cadence and recruiting plan** for the first semester of operation
+4. **An application to REACH Nationals** to become an officially recognized chapter
+
+REACH Nationals provides the playbook, the chapter handbook, and ongoing support. Founders get direct access to national-level resources, including the Industry Advisory Board, on day one.
+
+The [Apply page](/join) is the starting point. Selecting the "Start a chapter" path opens a different application than joining an existing one.
+
+## Why REACH chapters matter for the broader creator economy
+
+REACH chapters are the closest thing the creator economy has to a college-level professional pipeline. Industries like consulting, finance, law, and engineering have decades-old campus recruiting systems and student organizations that prepare students for careers. The creator economy is new enough that this infrastructure barely existed five years ago.
+
+REACH chapters are building that infrastructure on campuses across the country, run by students, supported by alumni and industry, designed for the modern reality of working in or around the creator economy. The system is intentionally bottom-up and student-led, which is why it works.
+
+If you are a student curious about the creator economy as a career path, the chapter is the cheapest, fastest, and most useful environment to start. If you are a university administrator, journalist, or brand marketer trying to understand collegiate creator activity, the chapter is the right unit of analysis.
+
+REACH Nationals is the national organization. The REACH chapter is where it happens.`,
+  },
+  {
     slug: 'announcing-the-reach-summit-los-angeles-december-2026',
     title: 'Announcing the REACH Summit: Los Angeles, December 2026',
     description:
