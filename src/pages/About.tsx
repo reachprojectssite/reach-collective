@@ -275,7 +275,7 @@ const About = () => (
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="grid grid-cols-4 grid-rows-2 gap-3 md:gap-4 h-[440px] md:h-[560px]"
+          className="grid grid-cols-2 md:grid-cols-4 grid-rows-2 gap-3 md:gap-4 h-[440px] md:h-[560px]"
         >
           <div className="col-span-2 row-span-2 rounded-xl overflow-hidden group">
             <img src="/images/Photos/Six Students Posing Photoshoot.jpg" alt="REACH photoshoot" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
