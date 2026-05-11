@@ -354,7 +354,7 @@ const Summit = () => {
                 </span>
               </div>
 
-              <h1 className="font-grotesk text-[3.25rem] sm:text-7xl md:text-8xl lg:text-[7.5rem] xl:text-[7rem] 2xl:text-[7.5rem] font-bold leading-[0.88] tracking-tight mb-7 text-reach-ink">
+              <h1 className="font-grotesk text-[2.5rem] sm:text-7xl md:text-8xl lg:text-[7.5rem] xl:text-[7rem] 2xl:text-[7.5rem] font-bold leading-[0.92] sm:leading-[0.88] tracking-tight mb-7 text-reach-ink">
                 Creators.
                 <br />
                 Tech.
@@ -1262,7 +1262,7 @@ const Summit = () => {
           WAITLIST DIALOG
       ════════════════════════════════════════ */}
       <Dialog open={waitlistOpen} onOpenChange={setWaitlistOpen}>
-        <DialogContent className="sm:max-w-md bg-white">
+        <DialogContent className="w-[calc(100%-2rem)] sm:w-full sm:max-w-md bg-white rounded-xl">
           <DialogHeader>
             <span className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.22em] text-reach-goldDark mb-2 w-fit">
               <Bell className="w-3 h-3" />
