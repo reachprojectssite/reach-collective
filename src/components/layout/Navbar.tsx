@@ -34,7 +34,7 @@ const Navbar = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center flex-shrink-0">
-            <img src="/Untitled.png" alt="Reach Nationals" className="h-9 w-auto object-contain" />
+            <img decoding="async" loading="eager" fetchPriority="high" src="/Untitled.png" alt="Reach Nationals" width="180" height="36" className="h-9 w-auto object-contain" />
           </Link>
 
           <div className="hidden md:flex items-center gap-7">

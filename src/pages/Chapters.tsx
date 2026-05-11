@@ -70,8 +70,8 @@ const Chapters = () => (
     {/* ── Hero ── */}
     <section className="relative overflow-hidden border-b border-reach-border">
       <div className="absolute inset-0">
-        <img
-          src="/images/Photos/usc group photo.jpg"
+        <img decoding="async" loading="eager" fetchPriority="high"
+          src="/images/Photos/usc group photo.webp"
           alt="REACH chapter members"
           className="w-full h-full object-cover object-[center_35%]"
         />
@@ -221,12 +221,12 @@ const Chapters = () => (
           className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4"
         >
           {[
-            { src: "/images/Photos/Four Female Students at a reach event.jpeg", alt: "REACH chapter members",   position: "object-center" },
-            { src: "/images/Photos/Students at Event.jpeg",                       alt: "REACH campus event",     position: "object-center" },
-            { src: "/images/Photos/Three Students Photoshoot.jpg",                alt: "REACH creators on campus", position: "object-[center_30%]" },
+            { src: "/images/Photos/Four Female Students at a reach event.webp", alt: "REACH chapter members",   position: "object-center" },
+            { src: "/images/Photos/Students at Event.webp",                       alt: "REACH campus event",     position: "object-center" },
+            { src: "/images/Photos/Three Students Photoshoot.webp",                alt: "REACH creators on campus", position: "object-[center_30%]" },
           ].map((photo, i) => (
             <div key={i} className="aspect-[4/3] rounded-xl overflow-hidden group">
-              <img
+              <img decoding="async" loading="lazy"
                 src={photo.src}
                 alt={photo.alt}
                 className={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ${photo.position}`}
@@ -360,8 +360,8 @@ const Chapters = () => (
     {/* ── CTA ── */}
     <section className="relative overflow-hidden border-t border-reach-border">
       <div className="absolute inset-0">
-        <img
-          src="/images/Photos/four members.jpg"
+        <img decoding="async" loading="lazy"
+          src="/images/Photos/four members.webp"
           alt="REACH community"
           className="w-full h-full object-cover object-[center_15%]"
         />

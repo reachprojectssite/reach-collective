@@ -112,8 +112,8 @@ const Contact = () => {
       {/* ── Hero ── */}
       <section className="relative overflow-hidden border-b border-reach-border">
         <div className="absolute inset-0">
-          <img
-            src="/images/Photos/Students at Event.jpeg"
+          <img decoding="async" loading="eager" fetchPriority="high"
+            src="/images/Photos/Students at Event.webp"
             alt="REACH Nationals community"
             className="w-full h-full object-cover object-[center_30%]"
           />

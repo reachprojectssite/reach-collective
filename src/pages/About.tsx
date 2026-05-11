@@ -43,22 +43,22 @@ const PRINCIPLES = [
 ];
 
 const ADVISORS: { name: string; role: string; company: string; photo: string; url?: string }[] = [
-  { name: "Alessandro Bogliari",  role: "CEO",                              company: "The Influencer Marketing Factory", photo: "/images/Industry%20Advisory%20Board/Alessandro%20Bogliari.jpg",  url: "https://www.linkedin.com/in/alessandrobogliari" },
-  { name: "Bill Imada",           role: "Chairman",                         company: "IW Group",                         photo: "/images/Industry%20Advisory%20Board/Bill%20Imada.jpeg",          url: "https://www.linkedin.com/in/bill-imada-2b90544/" },
-  { name: "Brendan Gahan",        role: "CEO",                              company: "Creator Authority",                photo: "/images/Industry%20Advisory%20Board/Brendan%20Gahan.jpg",        url: "https://www.linkedin.com/in/brendangahan/" },
-  { name: "Brooke Berry",         role: "Head of Creator Development",      company: "Snap",                             photo: "/images/Industry%20Advisory%20Board/Brooke%20Berry.jpg",         url: "https://www.linkedin.com/in/brookeberry" },
-  { name: "Chanel Lake",          role: "Head of Influencer (West)",        company: "Weber Shandwick",                  photo: "/images/Industry%20Advisory%20Board/Chanel%20Lake.jpg",          url: "https://www.linkedin.com/in/chanel-lake-61680050/" },
-  { name: "Damian Skoczylas",     role: "Co-Founder & President",           company: "Reign Maker Talent",               photo: "/images/Industry%20Advisory%20Board/Damian%20Skoczylas.jpg",     url: "https://www.linkedin.com/in/damianskoczylas" },
-  { name: "Eric Artell",          role: "Executive Director",               company: "Nerd HQ",                          photo: "/images/Industry%20Advisory%20Board/Eric%20Artell.jpg",          url: "https://www.linkedin.com/in/ericartell/" },
-  { name: "Evan Britton",         role: "CEO",                              company: "Famous Birthdays",                 photo: "/images/Industry%20Advisory%20Board/Evan%20Britton.jpg",         url: "https://www.linkedin.com/in/evanbritton" },
-  { name: "Freddy Nager",         role: "Professor",                        company: "USC",                              photo: "/images/Industry%20Advisory%20Board/Freddy%20Nager.jpg",         url: "https://www.linkedin.com/in/freddynager/" },
-  { name: "Kevin Herrera",        role: "CEO",                              company: "TheMachine",                       photo: "/images/Industry%20Advisory%20Board/Kevin%20Herrera.jpg",        url: "https://www.linkedin.com/in/kevin-herrera-8427a8121/" },
-  { name: "Lia Haberman",         role: "Professor",                        company: "UCLA",                             photo: "/images/Industry%20Advisory%20Board/Lia%20Haberman.jpg",         url: "https://www.linkedin.com/in/liahaberman/" },
-  { name: "Loren Piretra",        role: "Podcaster",                        company: "",                                 photo: "/images/Industry%20Advisory%20Board/Loren%20Piretra.jpg",        url: "https://www.linkedin.com/in/lorenpiretra/" },
-  { name: "Natasha Desruisseaux", role: "Lead, Emerging Creators",          company: "Meta",                             photo: "/images/Industry%20Advisory%20Board/Natasha%20DesRuisseaux.jpg", url: "https://www.linkedin.com/in/natashadesruis/" },
-  { name: "Peter Hollens",        role: "Creator",                          company: "",                                 photo: "/images/Industry%20Advisory%20Board/Peter%20Hollens.jpg",        url: "https://www.youtube.com/peterhollens" },
-  { name: "Phil Ranta",           role: "CEO",                              company: "Stealth Talent",                   photo: "/images/Industry%20Advisory%20Board/Phil%20Ranta.jpg",           url: "https://www.linkedin.com/in/philranta" },
-  { name: "Ramon Mendez",         role: "CEO",                              company: "View.ws",                          photo: "/images/Industry%20Advisory%20Board/Ramon%20Mendez.jpg",         url: "https://www.linkedin.com/in/ramon-mendez" },
+  { name: "Alessandro Bogliari",  role: "CEO",                              company: "The Influencer Marketing Factory", photo: "/images/Industry%20Advisory%20Board/Alessandro%20Bogliari.webp",  url: "https://www.linkedin.com/in/alessandrobogliari" },
+  { name: "Bill Imada",           role: "Chairman",                         company: "IW Group",                         photo: "/images/Industry%20Advisory%20Board/Bill%20Imada.webp",          url: "https://www.linkedin.com/in/bill-imada-2b90544/" },
+  { name: "Brendan Gahan",        role: "CEO",                              company: "Creator Authority",                photo: "/images/Industry%20Advisory%20Board/Brendan%20Gahan.webp",        url: "https://www.linkedin.com/in/brendangahan/" },
+  { name: "Brooke Berry",         role: "Head of Creator Development",      company: "Snap",                             photo: "/images/Industry%20Advisory%20Board/Brooke%20Berry.webp",         url: "https://www.linkedin.com/in/brookeberry" },
+  { name: "Chanel Lake",          role: "Head of Influencer (West)",        company: "Weber Shandwick",                  photo: "/images/Industry%20Advisory%20Board/Chanel%20Lake.webp",          url: "https://www.linkedin.com/in/chanel-lake-61680050/" },
+  { name: "Damian Skoczylas",     role: "Co-Founder & President",           company: "Reign Maker Talent",               photo: "/images/Industry%20Advisory%20Board/Damian%20Skoczylas.webp",     url: "https://www.linkedin.com/in/damianskoczylas" },
+  { name: "Eric Artell",          role: "Executive Director",               company: "Nerd HQ",                          photo: "/images/Industry%20Advisory%20Board/Eric%20Artell.webp",          url: "https://www.linkedin.com/in/ericartell/" },
+  { name: "Evan Britton",         role: "CEO",                              company: "Famous Birthdays",                 photo: "/images/Industry%20Advisory%20Board/Evan%20Britton.webp",         url: "https://www.linkedin.com/in/evanbritton" },
+  { name: "Freddy Nager",         role: "Professor",                        company: "USC",                              photo: "/images/Industry%20Advisory%20Board/Freddy%20Nager.webp",         url: "https://www.linkedin.com/in/freddynager/" },
+  { name: "Kevin Herrera",        role: "CEO",                              company: "TheMachine",                       photo: "/images/Industry%20Advisory%20Board/Kevin%20Herrera.webp",        url: "https://www.linkedin.com/in/kevin-herrera-8427a8121/" },
+  { name: "Lia Haberman",         role: "Professor",                        company: "UCLA",                             photo: "/images/Industry%20Advisory%20Board/Lia%20Haberman.webp",         url: "https://www.linkedin.com/in/liahaberman/" },
+  { name: "Loren Piretra",        role: "Podcaster",                        company: "",                                 photo: "/images/Industry%20Advisory%20Board/Loren%20Piretra.webp",        url: "https://www.linkedin.com/in/lorenpiretra/" },
+  { name: "Natasha Desruisseaux", role: "Lead, Emerging Creators",          company: "Meta",                             photo: "/images/Industry%20Advisory%20Board/Natasha%20DesRuisseaux.webp", url: "https://www.linkedin.com/in/natashadesruis/" },
+  { name: "Peter Hollens",        role: "Creator",                          company: "",                                 photo: "/images/Industry%20Advisory%20Board/Peter%20Hollens.webp",        url: "https://www.youtube.com/peterhollens" },
+  { name: "Phil Ranta",           role: "CEO",                              company: "Stealth Talent",                   photo: "/images/Industry%20Advisory%20Board/Phil%20Ranta.webp",           url: "https://www.linkedin.com/in/philranta" },
+  { name: "Ramon Mendez",         role: "CEO",                              company: "View.ws",                          photo: "/images/Industry%20Advisory%20Board/Ramon%20Mendez.webp",         url: "https://www.linkedin.com/in/ramon-mendez" },
 ];
 
 const ALUMNI: { name: string; note: string; url?: string }[] = [
@@ -113,8 +113,8 @@ const About = () => (
     {/* ── Hero ── */}
     <section className="relative overflow-hidden border-b border-reach-border">
       <div className="absolute inset-0">
-        <img
-          src="/images/Photos/Group of Students.jpg"
+        <img decoding="async" loading="eager" fetchPriority="high"
+          src="/images/Photos/Group of Students.webp"
           alt="REACH members"
           className="w-full h-full object-cover object-[center_45%]"
         />
@@ -278,19 +278,19 @@ const About = () => (
           className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-3 md:gap-4 md:h-[560px]"
         >
           <div className="aspect-[4/3] md:aspect-auto md:col-span-2 md:row-span-2 rounded-xl overflow-hidden group">
-            <img src="/images/Photos/Six Students Posing Photoshoot.jpg" alt="REACH photoshoot" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <img decoding="async" loading="lazy" src="/images/Photos/Six Students Posing Photoshoot.webp" alt="REACH photoshoot" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
           </div>
           <div className="aspect-[4/3] md:aspect-auto rounded-xl overflow-hidden group">
-            <img src="/images/Photos/Lollapalooza.jpg" alt="Lollapalooza" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <img decoding="async" loading="lazy" src="/images/Photos/Lollapalooza.webp" alt="Lollapalooza" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
           </div>
           <div className="aspect-[4/3] md:aspect-auto rounded-xl overflow-hidden group">
-            <img src="/images/Photos/VitaminWater at PreCoachella Gifting Suite.jpg" alt="VitaminWater at PreCoachella gifting suite" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <img decoding="async" loading="lazy" src="/images/Photos/VitaminWater at PreCoachella Gifting Suite.webp" alt="VitaminWater at PreCoachella gifting suite" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
           </div>
           <div className="aspect-[4/3] md:aspect-auto rounded-xl overflow-hidden group">
-            <img src="/images/Photos/usc group photo.jpg" alt="USC chapter members" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <img decoding="async" loading="lazy" src="/images/Photos/usc group photo.webp" alt="USC chapter members" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
           </div>
           <div className="aspect-[4/3] md:aspect-auto rounded-xl overflow-hidden group">
-            <img src="/images/Photos/four members.jpg" alt="REACH members" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <img decoding="async" loading="lazy" src="/images/Photos/four members.webp" alt="REACH members" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
           </div>
         </motion.div>
       </div>
@@ -516,8 +516,8 @@ const About = () => (
     {/* ── Join Us CTA ── */}
     <section className="relative overflow-hidden border-t border-reach-border">
       <div className="absolute inset-0">
-        <img
-          src="/images/Photos/Four Students at an event.jpeg"
+        <img decoding="async" loading="lazy"
+          src="/images/Photos/Four Students at an event.webp"
           alt="REACH event"
           className="w-full h-full object-cover object-[center_30%]"
         />

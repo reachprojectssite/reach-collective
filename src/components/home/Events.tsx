@@ -14,7 +14,7 @@ const events = [
       'Fanfix', 'Barebells', 'Vitamin Water', 'Nosotros Mezcal',
       'LESSEREVIL', 'Mavely', 'HiitHaus', '+ 20 more brands',
     ],
-    image: '/images/Photos/PreCoachella Gifting Suite.jpg',
+    image: '/images/Photos/PreCoachella Gifting Suite.webp',
   },
   {
     tag: 'Creator House · Chicago · 2024',
@@ -23,7 +23,7 @@ const events = [
     statLabel: 'Chicago',
     desc: 'REACH ran a Creator House in Chicago during Lollapalooza, one of the world\'s most iconic festivals. Creators, culture, and community colliding in real life.',
     highlights: [],
-    image: '/images/Photos/Lollapalooza3.jpeg',
+    image: '/images/Photos/Lollapalooza3.webp',
   },
   {
     tag: 'Community Event · Los Angeles, CA · 2025',
@@ -32,7 +32,7 @@ const events = [
     statLabel: 'HiitHaus',
     desc: 'A creator experience in LA with Sommer Ray that blurred the line between fitness, lifestyle, and culture. Built for the community. Made for the feed.',
     highlights: [],
-    image: '/images/Photos/NuffSaid.jpg',
+    image: '/images/Photos/NuffSaid.webp',
   },
 ];
 
@@ -76,7 +76,7 @@ const Events = () => {
             >
               {/* Event photo */}
               <div className="aspect-[4/3] relative overflow-hidden">
-                <img
+                <img decoding="async" loading="lazy"
                   src={event.image}
                   alt={event.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"

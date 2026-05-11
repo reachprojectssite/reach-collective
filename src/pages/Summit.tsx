@@ -334,9 +334,12 @@ const Summit = () => {
       <section ref={heroRef} className="relative overflow-hidden border-b border-reach-border">
         <div className="absolute inset-0">
           <motion.img
-            src="/images/gettyimages-2144928162-2048x2048.jpg"
+            src="/images/gettyimages-2144928162-2048x2048.webp"
             alt="REACH Summit"
             style={{ y: heroPhotoY, scale: heroPhotoScale }}
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
             className="w-full h-full object-cover object-[center_20%] will-change-transform"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-white/85 via-white/70 to-reach-offwhite/80" />
@@ -1116,19 +1119,19 @@ const Summit = () => {
             className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-3 md:gap-4 md:h-[500px]"
           >
             <div className="aspect-[4/3] md:aspect-auto md:col-span-2 md:row-span-2 rounded-xl overflow-hidden group">
-              <img src="/images/Summit/24a1ea0a-5c36-4b54-b2b0-9b54e04028e5.jpeg" alt="REACH event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <img decoding="async" loading="lazy" src="/images/Summit/24a1ea0a-5c36-4b54-b2b0-9b54e04028e5.webp" alt="REACH event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
             </div>
             <div className="aspect-[4/3] md:aspect-auto rounded-xl overflow-hidden group">
-              <img src="/images/Summit/original%20(4).jpeg" alt="REACH event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <img decoding="async" loading="lazy" src="/images/Summit/original%20(4).webp" alt="REACH event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
             </div>
             <div className="aspect-[4/3] md:aspect-auto rounded-xl overflow-hidden group">
-              <img src="/images/Summit/4ce0c3c4-4903-4b55-b6cc-070344dfcf1b.jpg" alt="REACH event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <img decoding="async" loading="lazy" src="/images/Summit/4ce0c3c4-4903-4b55-b6cc-070344dfcf1b.webp" alt="REACH event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
             </div>
             <div className="aspect-[4/3] md:aspect-auto rounded-xl overflow-hidden group">
-              <img src="/images/Summit/5c62a245-e947-4191-ad85-c8e832ce609d.jpg" alt="REACH event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <img decoding="async" loading="lazy" src="/images/Summit/5c62a245-e947-4191-ad85-c8e832ce609d.webp" alt="REACH event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
             </div>
             <div className="aspect-[4/3] md:aspect-auto rounded-xl overflow-hidden group">
-              <img src="/images/Summit/original%20(5).jpeg" alt="REACH event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <img decoding="async" loading="lazy" src="/images/Summit/original%20(5).webp" alt="REACH event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
             </div>
           </motion.div>
         </div>

@@ -179,8 +179,8 @@ const Join = () => {
       {/* ── Hero ── */}
       <section className="relative overflow-hidden border-b border-reach-border">
         <div className="absolute inset-0">
-          <img
-            src="/images/Photos/Three Students Photoshoot.jpg"
+          <img decoding="async" loading="eager" fetchPriority="high"
+            src="/images/Photos/Three Students Photoshoot.webp"
             alt="REACH community"
             className="w-full h-full object-cover object-[center_10%]"
           />
@@ -588,8 +588,8 @@ const Join = () => {
       {/* ── CTA / Reaffirm ── */}
       <section className="relative overflow-hidden border-t border-reach-border">
         <div className="absolute inset-0">
-          <img
-            src="/images/Photos/four members.jpg"
+          <img decoding="async" loading="lazy"
+            src="/images/Photos/four members.webp"
             alt="REACH community"
             className="w-full h-full object-cover object-[center_15%]"
           />

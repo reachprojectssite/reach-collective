@@ -72,8 +72,8 @@ const CreatorGrid = () => {
         >
           {/* Large photo card */}
           <div className="md:col-span-2 md:row-span-2 relative overflow-hidden rounded-2xl group min-h-[280px] md:min-h-0">
-            <img
-              src="/images/Photos/Four Students at an event.jpeg"
+            <img decoding="async" loading="lazy"
+              src="/images/Photos/Four Students at an event.webp"
               alt="REACH community"
               className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
             />
@@ -106,8 +106,8 @@ const CreatorGrid = () => {
 
           {/* Events photo */}
           <div className="relative overflow-hidden rounded-2xl group">
-            <img
-              src="/images/Photos/Students Holding Up YouTube Swag.jpeg"
+            <img decoding="async" loading="lazy"
+              src="/images/Photos/Students Holding Up YouTube Swag.webp"
               alt="REACH chapter event"
               className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
             />
