@@ -26,6 +26,10 @@
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
     <link rel="icon" type="image/png" href="/reachlog.png" />
 
+    <!-- Preload the homepage hero image so it can race the JS bundle.
+         Helps LCP on /. Other routes have their own hero img with loading="eager". -->
+    <link rel="preload" as="image" href="/images/hero/thisphoto.webp" fetchpriority="high">
+
     <!-- Non-blocking Google Fonts. Preconnect opens the connection early; the stylesheet
          is requested with media="print" then flipped to all once loaded so it does not
          block first paint. Reduces render-blocking time by ~1.4s on mobile. -->

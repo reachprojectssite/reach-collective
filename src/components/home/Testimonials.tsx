@@ -7,7 +7,7 @@ const testimonials = [
     name: 'Justin Leusner',
     handle: '@justinleusner',
     role: 'Chapter Founder · Penn State University',
-    photo: '/images/testimonials/Justin Leusner.jpg',
+    photo: '/images/testimonials/Justin Leusner.webp',
   },
   {
     quote:
@@ -15,7 +15,7 @@ const testimonials = [
     name: 'Nila Makhfi',
     handle: '@nilamakhfi',
     role: 'Chapter Founder · University of California, Los Angeles',
-    photo: '/images/testimonials/Nila Makhfi.png',
+    photo: '/images/testimonials/Nila Makhfi.webp',
   },
   {
     quote:
@@ -23,7 +23,7 @@ const testimonials = [
     name: 'Jayme Aiden',
     handle: '@jayme.aiden',
     role: 'Alum · University of California, Los Angeles',
-    photo: '/images/testimonials/Jayme Aiden.jpg',
+    photo: '/images/testimonials/Jayme Aiden.webp',
   },
 ];
 
@@ -81,7 +81,7 @@ const Testimonials = () => {
               {/* Top row */}
               <div className="flex items-start justify-between mb-6">
                 <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-white shadow-sm flex-shrink-0">
-                  <img src={t.photo} alt={t.name} className="w-full h-full object-cover" />
+                  <img decoding="async" loading="lazy" src={t.photo} alt={t.name} className="w-full h-full object-cover" />
                 </div>
                 {/* Quote mark */}
                 <svg width="24" height="18" viewBox="0 0 24 18" fill="none" className="text-reach-gold/40 group-hover:text-reach-gold/70 transition-colors">

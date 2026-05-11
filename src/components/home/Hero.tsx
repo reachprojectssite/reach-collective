@@ -131,8 +131,11 @@ const Hero = () => {
       <div className="relative order-1 lg:order-2 h-64 sm:h-80 lg:h-auto bg-reach-cream overflow-hidden">
         <motion.img
           style={{ y: photoY, scale: photoScale }}
-          src="/images/hero/thisphoto.jpg"
+          src="/images/hero/thisphoto.webp"
           alt="REACH community"
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
           className="absolute inset-0 w-full h-full object-cover object-[center_20%] will-change-transform"
         />
         {/* Subtle warm overlay */}

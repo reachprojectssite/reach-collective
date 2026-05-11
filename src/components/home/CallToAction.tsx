@@ -23,7 +23,7 @@ const CallToAction = () => {
       <div className="absolute inset-0">
         <motion.img
           style={{ y: bgY }}
-          src="/images/group-photo.jpg"
+          src="/images/group-photo.webp"
           alt="REACH community"
           className="w-full h-[120%] -top-[10%] absolute inset-x-0 object-cover object-center opacity-40 will-change-transform"
         />

@@ -4,16 +4,16 @@ const CLIENT_ID = '1idUvIq0FKjJXyzw7_R';
 const bf = (domain: string) => `https://cdn.brandfetch.io/${domain}?c=${CLIENT_ID}`;
 
 const creatorSpeakers = [
-  { name: 'Adam W', note: 'Creator', initials: 'AW', photo: '/images/People/Adam W.jpeg' },
-  { name: 'Cameron Dallas', note: 'Creator', initials: 'CD', photo: '/images/People/Cameron Dallas.jpg' },
-  { name: 'Cole Walliser', note: 'Director', initials: 'CW', photo: '/images/People/Cole Walliser.jpeg' },
-  { name: 'Colin & Samir', note: 'Creators', initials: 'CS', photo: '/images/People/Colin And Samir.jpg' },
-  { name: 'Jabari Banks', note: 'Actor', initials: 'JB', photo: '/images/People/Jabari Banks.jpg' },
-  { name: 'JasonTheWeen', note: 'Creator', initials: 'JW', photo: '/images/People/Jason The Ween.jpg' },
-  { name: 'Jordan Matter', note: 'Photographer', initials: 'JM', photo: '/images/People/Jordan Matter.jpg' },
-  { name: 'JT Barnett', note: 'Creator', initials: 'JT', photo: '/images/People/JT Barnett.jpg' },
-  { name: 'Steven He', note: 'Creator', initials: 'SH', photo: '/images/People/Steven He.jpeg' },
-  { name: 'Sydney Sweeney', note: 'Actress', initials: 'SS', photo: '/images/People/Sydney Sweeney.jpg' },
+  { name: 'Adam W', note: 'Creator', initials: 'AW', photo: '/images/People/Adam W.webp' },
+  { name: 'Cameron Dallas', note: 'Creator', initials: 'CD', photo: '/images/People/Cameron Dallas.webp' },
+  { name: 'Cole Walliser', note: 'Director', initials: 'CW', photo: '/images/People/Cole Walliser.webp' },
+  { name: 'Colin & Samir', note: 'Creators', initials: 'CS', photo: '/images/People/Colin And Samir.webp' },
+  { name: 'Jabari Banks', note: 'Actor', initials: 'JB', photo: '/images/People/Jabari Banks.webp' },
+  { name: 'JasonTheWeen', note: 'Creator', initials: 'JW', photo: '/images/People/Jason The Ween.webp' },
+  { name: 'Jordan Matter', note: 'Photographer', initials: 'JM', photo: '/images/People/Jordan Matter.webp' },
+  { name: 'JT Barnett', note: 'Creator', initials: 'JT', photo: '/images/People/JT Barnett.webp' },
+  { name: 'Steven He', note: 'Creator', initials: 'SH', photo: '/images/People/Steven He.webp' },
+  { name: 'Sydney Sweeney', note: 'Actress', initials: 'SS', photo: '/images/People/Sydney Sweeney.webp' },
 ];
 
 const industrySpeakers = [
@@ -145,7 +145,7 @@ const SocialProof = () => {
                 className={`w-16 h-16 rounded-full ${avatarBgs[i % avatarBgs.length]} flex items-center justify-center flex-shrink-0 shadow-md overflow-hidden`}
               >
                 {s.photo ? (
-                  <img src={s.photo} alt={s.name} className="w-full h-full object-cover" />
+                  <img decoding="async" loading="lazy" src={s.photo} alt={s.name} className="w-full h-full object-cover" />
                 ) : (
                   <span className="font-grotesk font-bold text-white text-xs tracking-wide">{s.initials}</span>
                 )}
