@@ -24,9 +24,9 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
       'REACH chapters at universities across the country. Find a chapter near you, start one on your campus, or pioneer the network in a new city.',
   },
   '/summit': {
-    title: 'REACH Summit 2026 | Los Angeles, December',
+    title: 'REACH Nationals Summit | Los Angeles, December 5',
     description:
-      'The REACH Summit is the flagship national gathering for the collegiate creator economy. Los Angeles, first week of December 2026.',
+      'An afternoon of panels and networking for creators, industry leaders, and students. One room in Los Angeles on December 5, 2026. Spots are limited.',
   },
   '/join': {
     title: 'Apply | REACH Nationals',

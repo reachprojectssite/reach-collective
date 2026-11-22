@@ -255,7 +255,7 @@ const Chapters = () => (
             </h2>
           </div>
           <p className="text-reach-ink/50 text-base max-w-sm leading-relaxed md:text-right">
-            Featured chapters below. We're at 100+ universities and growing fast.
+            Featured chapters below. We're at 200+ universities and growing fast.
           </p>
         </motion.div>
 

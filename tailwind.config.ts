@@ -34,6 +34,10 @@ export default {
 					electric: '#8B5CF6',
 					neon: '#22C55E',
 				},
+				summit: {
+					ink: '#0B0C11',
+					lime: '#D6FF3A',
+				},
 				// UI colors
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -148,6 +152,8 @@ export default {
 				'dm': ['DM Sans', 'sans-serif'],
 				'sohne': ['Hanken Grotesk', 'sans-serif'],
 				'dmono': ['DM Mono', 'ui-monospace', 'monospace'],
+				'anton': ['Anton', 'Impact', 'sans-serif'],
+				'space': ['Space Grotesk', 'sans-serif'],
 			}
 		}
 	},

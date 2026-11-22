@@ -8,7 +8,7 @@ const features = [
     tag: 'Campus Community',
     title: 'Your chapter. Your crew.',
     description:
-      'Official student organizations at 100+ universities. For creators, digital marketers, aspiring talent managers, editors, and anyone building in the creator economy. Weekly meetings, workshops, and collabs, all built around your campus.',
+      'Official student organizations with members at 200+ universities. For creators, digital marketers, aspiring talent managers, editors, and anyone building in the creator economy. Weekly meetings, workshops, and collabs, all built around your campus.',
   },
   {
     number: '02',

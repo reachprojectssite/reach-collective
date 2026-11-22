@@ -12,7 +12,7 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <img decoding="async" loading="lazy" src="/Untitled.png" alt="Reach Nationals" className="h-9 w-auto object-contain mb-5" />
             <p className="text-reach-ink/60 text-sm leading-relaxed max-w-sm mb-7">
-              The national chapter network connecting student creators, filmmakers, founders, and culture-builders at 100+ universities.
+              The national chapter network connecting student creators, filmmakers, founders, and culture-builders at 200+ universities.
             </p>
             <div className="space-y-1.5">
               <p className="text-reach-ink/55 text-[10px] uppercase tracking-widest font-bold">National Office</p>
