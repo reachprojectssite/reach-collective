@@ -68,7 +68,7 @@ const CallToAction = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-white/50 text-lg max-w-2xl mb-12 leading-relaxed"
           >
-            Most creators begin with a peer group. A campus. A roommate who edits. A friend with a camera. REACH is built around that reality: 100 universities, 5,000 members, one network that has your back.
+            Most creators begin with a peer group. A campus. A roommate who edits. A friend with a camera. REACH is built around that reality: 200+ universities, 5,000 members, one network that has your back.
           </motion.p>
 
           {/* CTAs */}

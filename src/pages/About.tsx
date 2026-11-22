@@ -29,7 +29,7 @@ const TIMELINE = [
     tag: "Movement",
     title: "100+ chapters strong",
     body:
-      "Reach Nationals is a registered 501(c)(3) nonprofit, operating chapters at over 100 universities, partnering with the biggest brands in media, and shaping the careers of the next generation of digital builders.",
+      "Reach Nationals is a registered 501(c)(3) nonprofit with members at over 200 universities, partnering with the biggest brands in media, and shaping the careers of the next generation of digital builders.",
   },
 ];
 

@@ -81,7 +81,7 @@ const Hero = () => {
           className="flex flex-wrap gap-3 mb-10"
         >
           {[
-            { value: 100,   suffix: '+',  label: 'Universities' },
+            { value: 200,   suffix: '+',  label: 'Universities' },
             { value: 5000,  suffix: '+',  label: 'Creators' },
             { value: 500,   suffix: 'M+', label: 'Cumulative Followers' },
           ].map((s, i) => (
